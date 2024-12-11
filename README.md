@@ -1,6 +1,8 @@
 <div align="center">
   <h1>YJS: Master JavaScript with Interactive Learning</h1>
   
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" width="100" height="100">
+  
   # YJS
   ### Interactive JavaScript Learning Platform with Interview Preparation
 
