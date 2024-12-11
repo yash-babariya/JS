@@ -1,26 +1,35 @@
-<div align="center">
-  <h1>YJS: Master JavaScript with Interactive Learning</h1>
+<div align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333;">
+  <h1 style="font-size: 2.5em; margin-bottom: 0.5em;">YJS: Master JavaScript with Interactive Learning</h1>
   
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" width="100" height="100">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" width="120" height="120" style="margin-bottom: 1em;">
   
-  # YJS
-  ### Interactive JavaScript Learning Platform with Interview Preparation
+  <h2 style="font-size: 1.5em; margin-top: 0;">Interactive JavaScript Learning Platform with Interview Preparation</h2>
 
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-  [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/yourusername/JSWithYash)
-  [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+  <div style="margin: 1em 0;">
+    <a href="LICENSE" style="text-decoration: none; color: #0366d6; margin-right: 0.5em;">
+      <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+    </a>
+    <a href="CONTRIBUTING.md" style="text-decoration: none; color: #28a745; margin-right: 0.5em;">
+      <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
+    </a>
+    <a href="https://github.com/yourusername/JSWithYash" style="text-decoration: none; color: #e34c26; margin-right: 0.5em;">
+      <img src="https://img.shields.io/badge/Made%20with-❤️-red.svg" alt="Made with Love">
+    </a>
+    <a href="#contributors-" style="text-decoration: none; color: #ff9800;">
+      <img src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square" alt="All Contributors">
+    </a>
+  </div>
 
-  <p align="center">
-    <a href="#demo">View Demo</a>
+  <p style="font-size: 1.2em;">
+    <a href="#demo" style="text-decoration: none; color: #0366d6;">View Demo</a>
     ·
-    <a href="#features">Features</a>
+    <a href="#features" style="text-decoration: none; color: #0366d6;">Features</a>
     ·
-    <a href="#getting-started">Getting Started</a>
+    <a href="#getting-started" style="text-decoration: none; color: #0366d6;">Getting Started</a>
     ·
-    <a href="#roadmap">Roadmap</a>
+    <a href="#roadmap" style="text-decoration: none; color: #0366d6;">Roadmap</a>
     ·
-    <a href="#all-contributors">All Contributors</a>
+    <a href="#all-contributors" style="text-decoration: none; color: #0366d6;">All Contributors</a>
   </p>
 </div>
 
