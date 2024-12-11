@@ -1,108 +1,59 @@
-<div align="center" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+<div align="center">
 
-<div style="background-color: #ffff00; padding: 20px; border: 5px dashed #ff0000;">
-  
-  # 🚀 YJS: Master JavaScript with Interactive Learning
-  ### Your Path to JavaScript Excellence! 🌟
+<!-- Header Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=14,14,14,14,14&height=200&section=header&text=YJS%20-%20JavaScript%20Learning&fontSize=70&fontColor=fff&animation=twinkling&fontAlignY=35"/>
 
-  ![JavaScript Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
+<!-- Typing Animation -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&random=false&width=435&lines=Interactive+Learning+🚀;Bilingual+Support+🌐;500%2B+Interview+Questions+💡;Real-time+Feedback+⚡;Modern+UI%2FUX+🎨"/>
+</p>
 
-  [![License](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=for-the-badge)](LICENSE)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-32cd32.svg?style=for-the-badge)](CONTRIBUTING.md)
-  [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-ff4500.svg?style=for-the-badge)](https://github.com/yourusername/JSWithYash)
-  [![Contributors](https://img.shields.io/badge/all_contributors-1-ffa500.svg?style=for-the-badge)](CONTRIBUTORS.md)
+<!-- Animated Emojis -->
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Open%20Book.png" alt="Learning" width="100" height="100"/>
+    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Coding" width="100" height="100"/>
+</p>
 
-  <div style="margin: 2em 0;">
-    <a href="#demo" style="text-decoration: none; color: #ff00ff; font-weight: bold; margin: 0 1em;">🎮 Demo</a>
-    <a href="#features" style="text-decoration: none; color: #ff00ff; font-weight: bold; margin: 0 1em;">✨ Features</a>
-    <a href="#getting-started" style="text-decoration: none; color: #ff00ff; font-weight: bold; margin: 0 1em;">🚀 Get Started</a>
-    <a href="#roadmap" style="text-decoration: none; color: #ff00ff; font-weight: bold; margin: 0 1em;">🗺️ Roadmap</a>
-  </div>
-</div>
+<!-- Status Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Modules-23_Complete-00ff00?style=for-the-badge&logo=javascript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Questions-500+-00ff00?style=for-the-badge&logo=questionmark&logoColor=white"/>
+</p>
 
-## 🌈 Project Overview
+## 🎯 Learning Modules
 
-<div style="background-color: #fff; padding: 20px; border-radius: 10px; margin: 20px 0;">
-YJS is your fun and interactive way to master JavaScript! With support for both English and ગુજરાતી, we make learning accessible and enjoyable for everyone! 🎈
-</div>
+<div align="center">
 
-## 🎯 Learning Adventure
-
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
-
-<div style="background-color: #ffe6f2; padding: 15px; border-radius: 10px;">
-  <h3>🌱 Fundamentals (Script 1-6)</h3>
-  
-  - 📦 Variables and Data Types
-  - 🔄 Control Flow
-  - 🎯 Functions and Scope
-  - 📚 Arrays and Objects
-  - ⚠️ Error Handling
-  - 🎨 Basic DOM Manipulation
-</div>
-
-<div style="background-color: #e6f2ff; padding: 15px; border-radius: 10px;">
-  <h3>🚀 Intermediate (Script 7-12)</h3>
-  
-  - 🎯 Advanced Functions
-  - 🏗️ Object-Oriented Programming
-  - ⚡ Asynchronous JavaScript
-  - 🌟 ES6+ Features
-  - 🎮 Event Handling
-  - 📝 Form Validation
-</div>
-
-<div style="background-color: #f2ffe6; padding: 15px; border-radius: 10px;">
-  <h3>💫 Advanced (Script 13-18)</h3>
-  
-  - 🏛️ Design Patterns
-  - ⚡ Performance Optimization
-  - 🔒 Security Best Practices
-  - 🌐 Modern Web APIs
-  - 🧪 Testing and Debugging
-  - 🛠️ Build Tools
-</div>
-
-<div style="background-color: #ffe6e6; padding: 15px; border-radius: 10px;">
-  <h3>🎓 Interview Prep (Script 19-23)</h3>
-  
-  - 💡 Core JavaScript Questions
-  - 🎯 DOM and Events
-  - 🚀 Framework Questions
-  - 🏗️ System Design
-  - 💻 Coding Challenges
-</div>
+| Module | Topics | Status |
+|:------:|:-------|:------:|
+| **Fundamentals** | ![JavaScript](https://img.shields.io/badge/Variables-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Arrays](https://img.shields.io/badge/Arrays-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Functions](https://img.shields.io/badge/Functions-F7DF1E?style=flat&logo=javascript&logoColor=black) | ![Progress](https://img.shields.io/badge/6_Modules-Complete-00C853?style=for-the-badge) |
+| **Intermediate** | ![OOP](https://img.shields.io/badge/OOP-61DAFB?style=flat&logo=react&logoColor=black) ![Async](https://img.shields.io/badge/Async-61DAFB?style=flat&logo=react&logoColor=black) ![ES6+](https://img.shields.io/badge/ES6+-61DAFB?style=flat&logo=react&logoColor=black) | ![Progress](https://img.shields.io/badge/6_Modules-Complete-00C853?style=for-the-badge) |
+| **Advanced** | ![Patterns](https://img.shields.io/badge/Patterns-764ABC?style=flat&logo=redux&logoColor=white) ![APIs](https://img.shields.io/badge/APIs-764ABC?style=flat&logo=redux&logoColor=white) ![Testing](https://img.shields.io/badge/Testing-764ABC?style=flat&logo=redux&logoColor=white) | ![Progress](https://img.shields.io/badge/6_Modules-Complete-00C853?style=for-the-badge) |
+| **Interview Prep** | ![Core](https://img.shields.io/badge/Core_JS-339933?style=flat&logo=node.js&logoColor=white) ![DOM](https://img.shields.io/badge/DOM-339933?style=flat&logo=node.js&logoColor=white) ![System Design](https://img.shields.io/badge/System_Design-339933?style=flat&logo=node.js&logoColor=white) | ![Progress](https://img.shields.io/badge/5_Modules-Complete-00C853?style=for-the-badge) |
 
 </div>
 
-## ✨ Super Cool Features
+## ⚡ Key Features
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
+<div align="center">
 
-<div style="background-color: #fff0f5; padding: 15px; border-radius: 10px; text-align: center;">
-  <h3>🌈 Interactive Learning</h3>
-  Live coding with instant feedback!
-</div>
-
-<div style="background-color: #f0f5ff; padding: 15px; border-radius: 10px; text-align: center;">
-  <h3>🌍 Bilingual Support</h3>
-  Learn in English or ગુજરાતી!
-</div>
-
-<div style="background-color: #f5fff0; padding: 15px; border-radius: 10px; text-align: center;">
-  <h3>📚 100+ Questions</h3>
-  Comprehensive interview prep!
-</div>
-
-<div style="background-color: #fff5f0; padding: 15px; border-radius: 10px; text-align: center;">
-  <h3>🎨 Modern Design</h3>
-  Beautiful & responsive interface!
-</div>
+| Feature | Description | Status |
+|:-------:|:------------|:------:|
+| 🌐 **Bilingual** | English & ગુજરાતી support | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
+| 💻 **Interactive** | Live coding environment | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
+| 📚 **500+ Questions** | Comprehensive interview prep | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
+| 🎯 **Projects** | Hands-on learning | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
 
 </div>
+## 🚀 Upcoming Features
 
-## 🚀 Quick Start
+<div align="center">
 
-<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+| Feature | Description | Status |
+|:-------:|:------------|:------:|
+| 📱 **Mobile Support** | Responsive design for mobile devices | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
+| 🧑‍🏫 **Mentorship** | One-on-one mentorship sessions | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
+| 🏆 **Certifications** | Earn certificates for module completion | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
+| 🌐 **More Languages** | Support for additional languages | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
 
 </div>
