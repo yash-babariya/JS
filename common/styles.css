@@ -1,0 +1,329 @@
+:root {
+    /* Dark Theme with Purple Gradient */
+    --bg-gradient-dark: linear-gradient(135deg, #13111C 0%, #241D3B 100%);
+    --bg-gradient-card: linear-gradient(160deg, #1E1B2E 0%, #2D2447 100%);
+    --bg-code: #1A1721;
+    --text-primary: #ffffff;
+    --text-secondary: #B8B5C3;
+    --accent: #9d4edd;
+    --accent-gradient: linear-gradient(45deg, #9d4edd 0%, #7b2cbf 100%);
+
+    /* VS Code-like syntax colors */
+    --code-keyword: #569cd6;
+    --code-string: #ce9178;
+    --code-number: #b5cea8;
+    --code-comment: #6a9955;
+    --code-function: #dcdcaa;
+    --code-variable: #9cdcfe;
+
+    /* UI Colors */
+    --success-color: #4CAF50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+}
+
+body {
+    background: var(--bg-gradient-dark);
+    color: var(--text-primary);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.note-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* Card Styling */
+.section-card {
+    background: var(--bg-gradient-card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(157, 78, 221, 0.1);
+}
+
+/* Code Block Styling */
+.code-example {
+    position: relative;
+    background: var(--bg-code);
+    padding: 2.5rem 1.5rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.code-example::before {
+    content: '○ ○ ○';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    color: #666;
+    font-size: 0.75rem;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.lang-btn {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--accent);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+}
+
+/* Content Display */
+.en,
+.gu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.en.active,
+.gu.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Navigation Button */
+.nav-btn {
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 78, 221, 0.4);
+}
+
+/* Practice Section */
+.practice-section {
+    background: linear-gradient(160deg, rgba(157, 78, 221, 0.1) 0%, rgba(123, 44, 191, 0.1) 100%);
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Hint Button */
+.hint-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+}
+
+.hint-btn:hover {
+    background: rgba(157, 78, 221, 0.1);
+}
+
+/* Copy Button */
+.copy-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: var(--accent-gradient);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+/* Landing Page Specific Styles */
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--bg-gradient-dark);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--bg-gradient-card);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(157, 78, 221, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    background: var(--accent-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background: var(--bg-gradient-card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(157, 78, 221, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.course-card {
+    background: var(--bg-gradient-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(157, 78, 221, 0.1);
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(157, 78, 221, 0.2);
+    border-color: var(--accent);
+}
+
+.course-card h3 {
+    color: var(--text-primary);
+}
+
+.course-card p {
+    color: var(--text-secondary);
+}
+
+.landing-btn {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    background: var(--accent-gradient);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+}
+
+.landing-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 78, 221, 0.4);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(157, 78, 221, 0.1);
+}
+
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .features-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}

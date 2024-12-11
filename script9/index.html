@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript DOM Manipulation Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>DOM Manipulation</h1>
+                <p>Learn how to interact with the Document Object Model</p>
+            </div>
+            <div class="gu">
+                <h1>DOM મેનિપ્યુલેશન</h1>
+                <p>ડોક્યુમેન્ટ ઓબ્જેક્ટ મોડેલ સાથે કેવી રીતે ઇન્ટરેક્ટ કરવું તે શીખો</p>
+            </div>
+        </div>
+
+        <!-- Selecting Elements -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Selecting Elements</h2>
+                <p>Different ways to select DOM elements</p>
+            </div>
+            <div class="gu">
+                <h2>એલિમેન્ટ્સ સિલેક્ટ કરવા</h2>
+                <p>DOM એલિમેન્ટ્સ સિલેક્ટ કરવાની વિવિધ રીતો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// By ID</span>
+<span class="keyword">const</span> element = document.getElementById(<span class="string">'myId'</span>);
+
+<span class="comment">// By Class</span>
+<span class="keyword">const</span> elements = document.getElementsByClassName(<span class="string">'myClass'</span>);
+
+<span class="comment">// By Tag Name</span>
+<span class="keyword">const</span> paragraphs = document.getElementsByTagName(<span class="string">'p'</span>);
+
+<span class="comment">// Query Selector</span>
+<span class="keyword">const</span> firstElement = document.querySelector(<span class="string">'.myClass'</span>);
+<span class="keyword">const</span> allElements = document.querySelectorAll(<span class="string">'.myClass'</span>);</pre>
+            </div>
+        </div>
+
+        <!-- Modifying Elements -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Modifying Elements</h2>
+                <p>Changing content and attributes</p>
+            </div>
+            <div class="gu">
+                <h2>એલિમેન્ટ્સ મોડિફાય કરવા</h2>
+                <p>કન્ટેન્ટ અને એટ્રિબ્યુટ્સ બદલવા</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Changing content</span>
+element.textContent = <span class="string">'New text'</span>;
+element.innerHTML = <span class="string">'&lt;span&gt;HTML content&lt;/span&gt;'</span>;
+
+<span class="comment">// Modifying attributes</span>
+element.setAttribute(<span class="string">'class'</span>, <span class="string">'newClass'</span>);
+element.classList.add(<span class="string">'active'</span>);
+element.classList.remove(<span class="string">'inactive'</span>);
+element.classList.toggle(<span class="string">'visible'</span>);</pre>
+            </div>
+        </div>
+
+        <!-- Creating and Removing Elements -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Creating and Removing Elements</h2>
+                <p>Dynamic DOM manipulation</p>
+            </div>
+            <div class="gu">
+                <h2>એલિમેન્ટ્સ બનાવવા અને દૂર કરવા</h2>
+                <p>ડાયનેમિક DOM મેનિપ્યુલેશન</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Creating elements</span>
+<span class="keyword">const</span> newDiv = document.createElement(<span class="string">'div'</span>);
+newDiv.textContent = <span class="string">'New Element'</span>;
+
+<span class="comment">// Adding to DOM</span>
+parentElement.appendChild(newDiv);
+parentElement.insertBefore(newDiv, referenceElement);
+
+<span class="comment">// Removing elements</span>
+element.remove();
+parentElement.removeChild(childElement);</pre>
+            </div>
+        </div>
+
+        <!-- Event Handling -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Event Handling</h2>
+                <p>Working with DOM events</p>
+            </div>
+            <div class="gu">
+                <h2>ઇવેન્ટ હેન્ડલિંગ</h2>
+                <p>DOM ઇવેન્ટ્સ સાથે કામ કરવું</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Adding event listeners</span>
+element.addEventListener(<span class="string">'click'</span>, function(event) {
+    console.log(<span class="string">'Clicked!'</span>);
+});
+
+<span class="comment">// Removing event listeners</span>
+element.removeEventListener(<span class="string">'click'</span>, handlerFunction);
+
+<span class="comment">// Event delegation</span>
+parentElement.addEventListener(<span class="string">'click'</span>, function(event) {
+    <span class="keyword">if</span> (event.target.matches(<span class="string">'.child-class'</span>)) {
+        console.log(<span class="string">'Child clicked!'</span>);
+    }
+});</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your DOM manipulation skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી DOM મેનિપ્યુલેશન સ્કિલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Dynamic List</h3>
+                    <p>Create a function to add and remove list items dynamically</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: ડાયનેમિક લિસ્ટ</h3>
+                    <p>લિસ્ટ આઇટમ્સ ડાયનેમિકલી ઉમેરવા અને દૂર કરવા માટે ફંક્શન બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">function</span> addListItem(text) {
+    <span class="keyword">const</span> li = document.createElement(<span class="string">'li'</span>);
+    li.textContent = text;
+    li.addEventListener(<span class="string">'click'</span>, () => li.remove());
+    document.querySelector(<span class="string">'ul'</span>).appendChild(li);
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Form Validation</h3>
+                    <p>Create a form with dynamic validation feedback</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: ફોર્મ વેલિડેશન</h3>
+                    <p>ડાયનેમિક વેલિડેશન ફીડબેક સાથે ફોર્મ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">function</span> validateForm(event) {
+    event.preventDefault();
+    <span class="keyword">const</span> input = document.querySelector(<span class="string">'input'</span>);
+    <span class="keyword">const</span> feedback = document.querySelector(<span class="string">'.feedback'</span>);
+    
+    <span class="keyword">if</span> (!input.value.trim()) {
+        feedback.textContent = <span class="string">'Field cannot be empty'</span>;
+        feedback.style.color = <span class="string">'red'</span>;
+    } <span class="keyword">else</span> {
+        feedback.textContent = <span class="string">'Valid input!'</span>;
+        feedback.style.color = <span class="string">'green'</span>;
+    }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Interactive Gallery</h3>
+                    <p>Create an image gallery with thumbnails and preview</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: ઇન્ટરેક્ટિવ ગેલેરી</h3>
+                    <p>થમ્બનેલ્સ અને પ્રિવ્ય�� સાથે ઇમેજ ગેલેરી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">function</span> createGallery(images) {
+    <span class="keyword">const</span> gallery = document.querySelector(<span class="string">'.gallery'</span>);
+    <span class="keyword">const</span> preview = document.querySelector(<span class="string">'.preview'</span>);
+    
+    images.forEach(src => {
+        <span class="keyword">const</span> thumb = document.createElement(<span class="string">'img'</span>);
+        thumb.src = src;
+        thumb.addEventListener(<span class="string">'click'</span>, () => {
+            preview.src = src;
+        });
+        gallery.appendChild(thumb);
+    });
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script8/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script10/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

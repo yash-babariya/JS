@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Error Handling Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>Error Handling and Debugging</h1>
+                <p>Learn how to handle errors and debug JavaScript code</p>
+            </div>
+            <div class="gu">
+                <h1>એરર હેન્ડલિંગ ���ને ડીબગિંગ</h1>
+                <p>JavaScript કોડમાં એરર હેન્ડલ કરવા અને ડીબગ કરવાનું શીખો</p>
+            </div>
+        </div>
+
+        <!-- Try-Catch -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Try-Catch Statements</h2>
+                <p>Basic error handling</p>
+            </div>
+            <div class="gu">
+                <h2>ટ્રાય-કેચ સ્ટેટમેન્ટ્સ</h2>
+                <p>બેઝિક એરર હેન્ડલિંગ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Basic try-catch</span>
+<span class="keyword">try</span> {
+    <span class="comment">// Code that might throw an error</span>
+    <span class="keyword">const</span> result = someUndefinedFunction();
+} <span class="keyword">catch</span> (error) {
+    console.error(<span class="string">'An error occurred:'</span>, error.message);
+}
+
+<span class="comment">// Try-catch-finally</span>
+<span class="keyword">try</span> {
+    <span class="keyword">const</span> data = JSON.parse(invalidJSON);
+} <span class="keyword">catch</span> (error) {
+    console.error(<span class="string">'Parsing error:'</span>, error);
+} <span class="keyword">finally</span> {
+    console.log(<span class="string">'This always runs'</span>);
+}</pre>
+            </div>
+        </div>
+
+        <!-- Custom Errors -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Custom Errors</h2>
+                <p>Creating and throwing custom errors</p>
+            </div>
+            <div class="gu">
+                <h2>કસ્ટમ એરર્સ</h2>
+                <p>કસ્ટમ એરર્સ બનાવવા અને થ્રો કરવા</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Custom error class</span>
+<span class="keyword">class</span> ValidationError <span class="keyword">extends</span> Error {
+    constructor(message) {
+        super(message);
+        <span class="keyword">this</span>.name = <span class="string">'ValidationError'</span>;
+    }
+}
+
+<span class="comment">// Using custom error</span>
+<span class="keyword">function</span> validateUser(user) {
+    <span class="keyword">if</span> (!user.name) {
+        <span class="keyword">throw new</span> ValidationError(<span class="string">'Name is required'</span>);
+    }
+}</pre>
+            </div>
+        </div>
+
+        <!-- Debugging Techniques -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Debugging Techniques</h2>
+                <p>Common debugging methods</p>
+            </div>
+            <div class="gu">
+                <h2>ડીબગિંગ ટેકનિક્સ</h2>
+                <p>સામાન્ય ડીબગિંગ મેથડ્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Console methods</span>
+console.log(<span class="string">'Basic logging'</span>);
+console.error(<span class="string">'Error message'</span>);
+console.warn(<span class="string">'Warning message'</span>);
+console.table([{ name: <span class="string">'John'</span>, age: 30 }]);
+
+<span class="comment">// Debugger statement</span>
+<span class="keyword">function</span> debugThis() {
+    debugger;  <span class="comment">// Code stops here in dev tools</span>
+    <span class="comment">// Continue debugging...</span>
+}</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your error handling skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી એરર હેન્ડલિંગ સ્કિલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Form Validation</h3>
+                    <p>Create a form validator with custom error handling</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: ફોર્મ વેલિડેશન</h3>
+                    <p>કસ્ટમ એરર હેન્ડલિંગ સાથે ફોર્મ વેલિડેટર બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">function</span> validateForm(formData) {
+    <span class="keyword">try</span> {
+        <span class="keyword">if</span> (!formData.email) {
+            <span class="keyword">throw new</span> ValidationError(<span class="string">'Email is required'</span>);
+        }
+        <span class="keyword">if</span> (!formData.email.includes(<span class="string">'@'</span>)) {
+            <span class="keyword">throw new</span> ValidationError(<span class="string">'Invalid email format'</span>);
+        }
+        <span class="keyword">return</span> true;
+    } <span class="keyword">catch</span> (error) {
+        displayError(error.message);
+        <span class="keyword">return</span> false;
+    }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: API Error Handler</h3>
+                    <p>Create a robust API error handling system</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: API એરર હેન્ડલર</h3>
+                    <p>મજબૂત API એરર હેન્ડલિંગ સિસ્ટમ બ��ાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">async function</span> fetchWithErrorHandling(url) {
+    <span class="keyword">try</span> {
+        <span class="keyword">const</span> response = <span class="keyword">await</span> fetch(url);
+        <span class="keyword">if</span> (!response.ok) {
+            <span class="keyword">throw new</span> Error(`HTTP error! status: ${response.status}`);
+        }
+        <span class="keyword">const</span> data = <span class="keyword">await</span> response.json();
+        <span class="keyword">return</span> data;
+    } <span class="keyword">catch</span> (error) {
+        handleAPIError(error);
+        <span class="keyword">throw</span> error;
+    }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Debug Logger</h3>
+                    <p>Create a debug logging utility</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: ડીબગ લોગર</h3>
+                    <p>ડીબગ લોગિંગ યુટિલિટી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> Logger = {
+    debug: (message, data) => {
+        console.log(`[DEBUG] ${message}`, data);
+    },
+    error: (message, error) => {
+        console.error(`[ERROR] ${message}`, error);
+        saveErrorLog(message, error);
+    },
+    warn: (message) => {
+        console.warn(`[WARN] ${message}`);
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script11/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script13/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

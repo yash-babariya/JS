@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Math Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>Math and Number Operations</h1>
+                <p>Learn about mathematical operations and number handling</p>
+            </div>
+            <div class="gu">
+                <h1>ગણિત અને નંબર ઓપરેશન્સ</h1>
+                <p>ગાણિતિક ઓપરેશન્સ અને નંબર હેન્ડલિંગ વિશે શીખો</p>
+            </div>
+        </div>
+
+        <!-- Math Object -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Math Object</h2>
+                <p>Common mathematical operations</p>
+            </div>
+            <div class="gu">
+                <h2>મેથ ઓબ્જેક્ટ</h2>
+                <p>સામાન્ય ગાણિતિક ઓપરેશન્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Basic Math operations</span>
+Math.abs(-5);         <span class="comment">// 5</span>
+Math.round(4.7);      <span class="comment">// 5</span>
+Math.floor(4.7);      <span class="comment">// 4</span>
+Math.ceil(4.3);       <span class="comment">// 5</span>
+Math.max(1, 2, 3);    <span class="comment">// 3</span>
+Math.min(1, 2, 3);    <span class="comment">// 1</span>
+Math.random();        <span class="comment">// Random number between 0 and 1</span>
+Math.PI;              <span class="comment">// 3.141592653589793</span></pre>
+            </div>
+        </div>
+
+        <!-- Number Methods -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Number Methods</h2>
+                <p>Working with numbers</p>
+            </div>
+            <div class="gu">
+                <h2>નંબર મેથડ્સ</h2>
+                <p>નંબર્સ સાથે કામ કરવું</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Number formatting</span>
+<span class="keyword">const</span> num = 123.456;
+num.toFixed(2);          <span class="comment">// "123.46"</span>
+num.toPrecision(4);      <span class="comment">// "123.5"</span>
+num.toString();          <span class="comment">// "123.456"</span>
+
+<span class="comment">// Parsing numbers</span>
+Number.parseInt(<span class="string">"123"</span>);     <span class="comment">// 123</span>
+Number.parseFloat(<span class="string">"123.45"</span>); <span class="comment">// 123.45</span>
+Number.isInteger(5);     <span class="comment">// true</span>
+Number.isNaN(NaN);      <span class="comment">// true</span></pre>
+            </div>
+        </div>
+
+        <!-- Advanced Math -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Advanced Math</h2>
+                <p>Complex mathematical operations</p>
+            </div>
+            <div class="gu">
+                <h2>એડવાન્સ્ડ મેથ</h2>
+                <p>જટિલ ગાણિતિક ઓપરેશન્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Trigonometry</span>
+Math.sin(Math.PI / 2);    <span class="comment">// 1</span>
+Math.cos(Math.PI);        <span class="comment">// -1</span>
+Math.tan(Math.PI / 4);    <span class="comment">// ~1</span>
+
+<span class="comment">// Powers and roots</span>
+Math.pow(2, 3);          <span class="comment">// 8</span>
+Math.sqrt(16);           <span class="comment">// 4</span>
+Math.cbrt(27);           <span class="comment">// 3</span>
+
+<span class="comment">// Logarithms</span>
+Math.log(Math.E);        <span class="comment">// 1</span>
+Math.log10(100);         <span class="comment">// 2</span></pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your math skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી ગણિત સ્કિલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Calculator</h3>
+                    <p>Create a basic calculator utility</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: કેલ્ક્યુલેટર</h3>
+                    <p>બેઝિક કેલ્ક્યુલેટર યુટિલિટી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> calculator = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => b !== 0 ? a / b : <span class="string">'Cannot divide by zero'</span>,
+    power: (a, b) => Math.pow(a, b),
+    root: a => Math.sqrt(a),
+    round: (num, decimals) => Number(Math.round(num + <span class="string">'e'</span> + decimals) + <span class="string">'e-'</span> + decimals)
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Statistics Calculator</h3>
+                    <p>Create a utility for statistical calculations</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: સ્ટેટિસ્ટિક્સ કેલ્ક્યુલેટર</h3>
+                    <p>આંકડાશાસ્ત્રીય ગણતરી માટે યુટિલિટી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> statistics = {
+    mean: arr => arr.reduce((a, b) => a + b) / arr.length,
+    median: arr => {
+        <span class="keyword">const</span> sorted = [...arr].sort((a, b) => a - b);
+        <span class="keyword">const</span> mid = Math.floor(sorted.length / 2);
+        <span class="keyword">return</span> sorted.length % 2 === 0
+            ? (sorted[mid - 1] + sorted[mid]) / 2
+            : sorted[mid];
+    },
+    mode: arr => {
+        <span class="keyword">const</span> freq = {};
+        arr.forEach(num => freq[num] = (freq[num] || 0) + 1);
+        <span class="keyword">return</span> Object.entries(freq)
+            .reduce((a, b) => a[1] > b[1] ? a : b)[0];
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Geometry Calculator</h3>
+                    <p>Create a calculator for geometric calculations</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: જ્યોમેટ્રી કેલ્ક્યુલેટર</h3>
+                    <p>ભૌમિતિક ગણતરી માટે કેલ્ક્યુલેટર બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> geometry = {
+    circle: {
+        area: r => Math.PI * r * r,
+        circumference: r => 2 * Math.PI * r
+    },
+    rectangle: {
+        area: (l, w) => l * w,
+        perimeter: (l, w) => 2 * (l + w)
+    },
+    triangle: {
+        area: (b, h) => (b * h) / 2,
+        pythagorean: (a, b) => Math.sqrt(a * a + b * b)
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script15/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script17/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

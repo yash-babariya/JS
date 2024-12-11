@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Interview Questions - Complete List</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Core JavaScript Questions -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Core JavaScript Questions (Part 1)</h2>
+                <div class="code-example">
+                    <pre><span class="comment">// Section 1: Variables and Data Types</span>
+
+1. What are the different data types in JavaScript?
+   Answer: Number, String, Boolean, Object, Null, Undefined, Symbol, BigInt
+
+2. Explain the difference between null and undefined.
+   Answer: undefined means variable declared but not assigned,
+   null is an explicit assignment to represent "no value"
+
+3. How does type coercion work in JavaScript?
+   Example:
+   console.log(1 + "2")      // "12"
+   console.log(1 - "2")      // -1
+   console.log("2" * "3")    // 6
+
+4. What is temporal dead zone (TDZ)?
+   Answer: Period between variable declaration and initialization
+   where let/const variables cannot be accessed
+
+5. Explain different ways to declare objects
+   Example:
+   const obj1 = {}
+   const obj2 = new Object()
+   const obj3 = Object.create(null)
+
+<span class="comment">// Section 2: Functions and Scope</span>
+
+6. What is function hoisting?
+   Example:
+   sayHello();  // Works
+   function sayHello() { console.log("Hello"); }
+
+7. How do arrow functions differ from regular functions?
+   - No this binding
+   - No arguments object
+   - Can't be used as constructors
+
+8. Explain lexical scope
+   Example:
+   function outer() {
+       const x = 10;
+       function inner() {
+           console.log(x); // Access to outer x
+       }
+   }
+
+9. What is closure and how is it useful?
+   Example:
+   function counter() {
+       let count = 0;
+       return () => ++count;
+   }
+
+10. Explain the module pattern
+    Example:
+    const module = (function() {
+        const private = 'secret';
+        return {
+            public: function() {
+                console.log(private);
+            }
+        };
+    })();
+
+<span class="comment">// Section 3: Objects and Prototypes</span>
+
+11. How does prototypal inheritance work?
+    Example:
+    function Animal(name) {
+        this.name = name;
+    }
+    Animal.prototype.speak = function() {
+        return `${this.name} makes a sound`;
+    };
+
+12. What are getters and setters?
+    Example:
+    const obj = {
+        _value: 0,
+        get value() { return this._value; },
+        set value(v) { this._value = v; }
+    };
+
+13. Explain Object.defineProperty()
+    Example:
+    Object.defineProperty(obj, 'id', {
+        value: 1,
+        writable: false,
+        enumerable: true
+    });
+
+14. What is the difference between Object.freeze() and Object.seal()?
+    Answer: freeze prevents modifications to properties,
+    seal prevents adding/removing properties but allows modifications
+
+15. How do you implement method chaining?
+    Example:
+    class Calculator {
+        constructor() { this.value = 0; }
+        add(n) { this.value += n; return this; }
+        subtract(n) { this.value -= n; return this; }
+    }
+
+<span class="comment">// Section 4: Asynchronous JavaScript</span>
+
+16. Explain the event loop
+    Answer: Mechanism that handles async operations through
+    callback queue and microtask queue
+
+17. What are Promises and how do they work?
+    Example:
+    new Promise((resolve, reject) => {
+        // async operation
+        if (success) resolve(data);
+        else reject(error);
+    });
+
+18. How does async/await work?
+    Example:
+    async function getData() {
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+19. What is the difference between setTimeout and setInterval?
+    Example:
+    setTimeout(() => console.log("Once"), 1000);
+    setInterval(() => console.log("Repeatedly"), 1000);
+
+20. How do you handle multiple promises?
+    Example:
+    Promise.all([p1, p2, p3])
+    Promise.race([p1, p2, p3])
+    Promise.allSettled([p1, p2, p3])</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- More sections to follow -->
+        <div class="section-card">
+            <div class="en active">
+                <h3>Note: This is Part 1 of the interview questions. Continue to next parts for more questions.</h3>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script19/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script20/index.html'">
+                    <span class="en active">Next Part</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

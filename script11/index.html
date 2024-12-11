@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Async Programming Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>Asynchronous Programming</h1>
+                <p>Learn about callbacks, promises, and async/await</p>
+            </div>
+            <div class="gu">
+                <h1>એસિન્ક્રોનસ પ્રોગ્રામિંગ</h1>
+                <p>કોલબેક્સ, પ્રોમિસીસ અને એસિન્ક/અવેઇટ વિશે શીખો</p>
+            </div>
+        </div>
+
+        <!-- Callbacks -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Callbacks</h2>
+                <p>Understanding callback functions</p>
+            </div>
+            <div class="gu">
+                <h2>કોલબેક્સ</h2>
+                <p>કોલબેક ફંક્શન્સ સમજવા</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Basic callback example</span>
+<span class="keyword">function</span> fetchData(callback) {
+    setTimeout(() => {
+        <span class="keyword">const</span> data = { id: 1, name: <span class="string">'John'</span> };
+        callback(data);
+    }, 2000);
+}
+
+fetchData(<span class="keyword">function</span>(result) {
+    console.log(result);
+});</pre>
+            </div>
+        </div>
+
+        <!-- Promises -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Promises</h2>
+                <p>Working with promises</p>
+            </div>
+            <div class="gu">
+                <h2>પ્રોમિસીસ</h2>
+                <p>પ્રોમિસીસ સાથે કામ કરવું</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Creating a promise</span>
+<span class="keyword">const</span> myPromise = <span class="keyword">new</span> Promise((resolve, reject) => {
+    setTimeout(() => {
+        <span class="keyword">const</span> success = true;
+        <span class="keyword">if</span> (success) {
+            resolve(<span class="string">'Operation successful!'</span>);
+        } <span class="keyword">else</span> {
+            reject(<span class="string">'Operation failed!'</span>);
+        }
+    }, 2000);
+});
+
+<span class="comment">// Using promises</span>
+myPromise
+    .then(result => console.log(result))
+    .catch(error => console.error(error));</pre>
+            </div>
+        </div>
+
+        <!-- Async/Await -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Async/Await</h2>
+                <p>Modern asynchronous programming</p>
+            </div>
+            <div class="gu">
+                <h2>એસિન્ક/અવેઇટ</h2>
+                <p>આધુનિક એસિન્ક્રોનસ પ્રોગ્રામિંગ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Async function</span>
+<span class="keyword">async function</span> fetchUserData() {
+    <span class="keyword">try</span> {
+        <span class="keyword">const</span> response = <span class="keyword">await</span> fetch(<span class="string">'https://api.example.com/user'</span>);
+        <span class="keyword">const</span> data = <span class="keyword">await</span> response.json();
+        <span class="keyword">return</span> data;
+    } <span class="keyword">catch</span> (error) {
+        console.error(<span class="string">'Error:'</span>, error);
+    }
+}</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your async programming skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી એસિન્ક પ્રોગ્રામિંગ સ્કિલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Promise Chain</h3>
+                    <p>Create a chain of promises to process data</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: પ્રોમિસ ચેઇન</h3>
+                    <p>ડેટા પ્રોસેસ કરવા માટે પ્રોમિસીસની ચેઇન બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre>fetchUserData()
+    .then(user => fetchUserPosts(user.id))
+    .then(posts => filterPosts(posts))
+    .then(filteredPosts => displayPosts(filteredPosts))
+    .catch(error => console.error(error));</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Async Data Loading</h3>
+                    <p>Create an async function to load and display data</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: એસિન્ક ડેટા લોડિંગ</h3>
+                    <p>ડેટા લોડ અને ડિસ્પ્લે કરવા માટે એસિન્ક ફંક્શન બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">async function</span> loadData() {
+    <span class="keyword">try</span> {
+        <span class="keyword">const</span> response = <span class="keyword">await</span> fetch(<span class="string">'https://api.example.com/data'</span>);
+        <span class="keyword">const</span> data = <span class="keyword">await</span> response.json();
+        displayData(data);
+    } <span class="keyword">catch</span> (error) {
+        showError(error);
+    } <span class="keyword">finally</span> {
+        hideLoading();
+    }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Parallel Requests</h3>
+                    <p>Handle multiple async requests in parallel</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: પેરેલલ રિક્વેસ્ટ્સ</h3>
+                    <p>મલ્ટિપલ એસિન્ક રિક્વેસ્ટ્સને પેરેલલમાં હેન્ડલ કરો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">async function</span> loadMultipleData() {
+    <span class="keyword">try</span> {
+        <span class="keyword">const</span> [users, posts, comments] = <span class="keyword">await</span> Promise.all([
+            fetch(<span class="string">'api/users'</span>).then(r => r.json()),
+            fetch(<span class="string">'api/posts'</span>).then(r => r.json()),
+            fetch(<span class="string">'api/comments'</span>).then(r => r.json())
+        ]);
+        return { users, posts, comments };
+    } <span class="keyword">catch</span> (error) {
+        console.error(<span class="string">'Error loading data:'</span>, error);
+    }
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script10/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script12/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

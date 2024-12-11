@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Operators Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript Operators Guide</h1>
+                <p>Learn about different types of operators in JavaScript.</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript ઓપરેટર્સ માર્ગદર્શિકા</h1>
+                <p>JavaScript માં વિવિધ પ્રકારના ઓપરેટર્સ વિશે જાણો.</p>
+            </div>
+        </div>
+
+        <!-- Arithmetic Operators -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Arithmetic Operators</h2>
+                <p>Basic mathematical operations in JavaScript</p>
+            </div>
+            <div class="gu">
+                <h2>એરિથમેટિક ઓપરેટર્સ</h2>
+                <p>JavaScript માં મૂળભૂત ગણિતીય ક્રિયાઓ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn" title="Copy code">
+                    <i class="fas fa-copy"></i>
+                </button>
+                <pre><span class="keyword">let</span> a = <span class="number">10</span>;
+<span class="keyword">let</span> b = <span class="number">5</span>;
+
+<span class="comment">// Addition (+)</span>
+console.log(a + b);  <span class="comment">// 15</span>
+
+<span class="comment">// Subtraction (-)</span>
+console.log(a - b);  <span class="comment">// 5</span>
+
+<span class="comment">// Multiplication (*)</span>
+console.log(a * b);  <span class="comment">// 50</span>
+
+<span class="comment">// Division (/)</span>
+console.log(a / b);  <span class="comment">// 2</span>
+
+<span class="comment">// Modulus (%)</span>
+console.log(a % b);  <span class="comment">// 0</span>
+
+<span class="comment">// Exponentiation (**)</span>
+console.log(a ** <span class="number">2</span>);  <span class="comment">// 100</span></pre>
+            </div>
+        </div>
+
+        <!-- Assignment Operators -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Assignment Operators</h2>
+                <p>Different ways to assign values</p>
+            </div>
+            <div class="gu">
+                <h2>એસાઇનમેન્ટ ઓપરેટર્સ</h2>
+                <p>વેલ્યુ એસાઇન કરવાની વિવિધ રીતો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> x = <span class="number">10</span>;
+x += <span class="number">5</span>;  <span class="comment">// x = x + 5</span>
+x -= <span class="number">3</span>;  <span class="comment">// x = x - 3</span>
+x *= <span class="number">2</span>;  <span class="comment">// x = x * 2</span>
+x /= <span class="number">4</span>;  <span class="comment">// x = x / 4</span>
+x %= <span class="number">3</span>;  <span class="comment">// x = x % 3</span>
+x **= <span class="number">2</span>; <span class="comment">// x = x ** 2</span></pre>
+            </div>
+        </div>
+
+        <!-- Comparison Operators -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Comparison Operators</h2>
+                <p>Compare values and return boolean results</p>
+            </div>
+            <div class="gu">
+                <h2>કમ્પેરિઝન ઓપરેટર્સ</h2>
+                <p>વેલ્યુની તુલના કરો અને બૂલિયન પરિણામ મેળવો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> a = <span class="number">5</span>, b = <span class="number">10</span>;
+
+console.log(a == b);   <span class="comment">// false (equal to)</span>
+console.log(a === b);  <span class="comment">// false (strict equal to)</span>
+console.log(a != b);   <span class="comment">// true (not equal to)</span>
+console.log(a !== b);  <span class="comment">// true (strict not equal to)</span>
+console.log(a > b);    <span class="comment">// false (greater than)</span>
+console.log(a < b);    <span class="comment">// true (less than)</span>
+console.log(a >= b);   <span class="comment">// false (greater than or equal to)</span>
+console.log(a <= b);   <span class="comment">// true (less than or equal to)</span></pre>
+            </div>
+        </div>
+
+        <!-- Logical Operators -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Logical Operators</h2>
+                <p>Combine conditions and perform logical operations</p>
+            </div>
+            <div class="gu">
+                <h2>લોજિકલ ઓપરેટર્સ</h2>
+                <p>શરતોને જોડો અને લોજિકલ ઓપરેશન્સ કરો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> isAdult = <span class="keyword">true</span>;
+<span class="keyword">let</span> hasID = <span class="keyword">false</span>;
+
+console.log(isAdult && hasID);  <span class="comment">// false (AND)</span>
+console.log(isAdult || hasID);  <span class="comment">// true (OR)</span>
+console.log(!isAdult);          <span class="comment">// false (NOT)</span>
+
+<span class="comment">// Short-circuit evaluation</span>
+<span class="keyword">let</span> name = <span class="string">""</span> || <span class="string">"Guest"</span>;  <span class="comment">// "Guest"</span>
+<span class="keyword">let</span> user = { name: <span class="string">"John"</span> };
+<span class="keyword">let</span> userName = user && user.name;  <span class="comment">// "John"</span></pre>
+            </div>
+        </div>
+
+        <!-- Unary Operators -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Unary Operators</h2>
+                <p>Operators that work with a single operand</p>
+            </div>
+            <div class="gu">
+                <h2>યુનરી ઓપરેટર્સ</h2>
+                <p>એક ઓપરેન્ડ સાથે કામ કરતા ઓપરેટર્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> x = <span class="number">5</span>;
+<span class="keyword">let</span> y = -x;      <span class="comment">// Unary negation</span>
+
+x++;                <span class="comment">// Increment</span>
+console.log(x);     <span class="comment">// 6</span>
+
+y--;                <span class="comment">// Decrement</span>
+console.log(y);     <span class="comment">// -6</span>
+
+<span class="comment">// Type operators</span>
+console.log(<span class="keyword">typeof</span> x);     <span class="comment">// "number"</span>
+console.log(<span class="keyword">typeof</span> <span class="string">"Hello"</span>); <span class="comment">// "string"</span></pre>
+            </div>
+        </div>
+
+        <!-- Conditional (Ternary) Operator -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Conditional (Ternary) Operator</h2>
+                <p>Shorthand for simple if-else conditions</p>
+            </div>
+            <div class="gu">
+                <h2>કન્ડિશનલ (ટર્નરી) ઓપરેટર</h2>
+                <p>સરળ if-else શરતો માટે શોર્ટહેન્ડ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> age = <span class="number">20</span>;
+<span class="keyword">let</span> status = age >= <span class="number">18</span> ? <span class="string">"Adult"</span> : <span class="string">"Minor"</span>;
+
+<span class="comment">// Nested ternary</span>
+<span class="keyword">let</span> result = age < <span class="number">13</span> ? <span class="string">"Child"</span> 
+           : age < <span class="number">18</span> ? <span class="string">"Teen"</span> 
+           : <span class="string">"Adult"</span>;</pre>
+            </div>
+        </div>
+
+        <!-- Bitwise Operators -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Bitwise Operators</h2>
+                <p>Perform operations on binary representations</p>
+            </div>
+            <div class="gu">
+                <h2>બિટવાઇઝ ઓપરેટર્સ</h2>
+                <p>બાઇનરી રજૂઆતો પર ઓપરેશન્સ કરો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> a = <span class="number">5</span>;  <span class="comment">// 101 in binary</span>
+<span class="keyword">let</span> b = <span class="number">3</span>;  <span class="comment">// 011 in binary</span>
+
+console.log(a & b);   <span class="comment">// 1 (AND)</span>
+console.log(a | b);   <span class="comment">// 7 (OR)</span>
+console.log(a ^ b);   <span class="comment">// 6 (XOR)</span>
+console.log(~a);      <span class="comment">// -6 (NOT)</span>
+console.log(a << <span class="number">1</span>); <span class="comment">// 10 (Left shift)</span>
+console.log(a >> <span class="number">1</span>); <span class="comment">// 2 (Right shift)</span></pre>
+            </div>
+        </div>
+
+        <!-- String Operators -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>String Operators</h2>
+                <p>Concatenate and work with strings</p>
+            </div>
+            <div class="gu">
+                <h2>સ્ટ્રિંગ ઓપરેટર્સ</h2>
+                <p>સ્ટ્રિંગ્સને જોડો અને તેની સાથે કામ કરો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> str1 = <span class="string">"Hello"</span>;
+<span class="keyword">let</span> str2 = <span class="string">"World"</span>;
+
+<span class="comment">// Concatenation</span>
+console.log(str1 + <span class="string">" "</span> + str2);  <span class="comment">// "Hello World"</span>
+
+<span class="comment">// Template literals</span>
+console.log(<span class="string">`${str1} ${str2}!`</span>);  <span class="comment">// "Hello World!"</span>
+
+<span class="comment">// Concatenation assignment</span>
+str1 += <span class="string">" there"</span>;  <span class="comment">// "Hello there"</span></pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Master JavaScript operators with these exercises!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>આ કસરતો સાથે JavaScript ઓપરેટર્સને માસ્ટર કરો!</p>
+            </div>
+
+            <!-- Exercise 1: Basic Calculations -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Temperature Converter</h3>
+                    <p>Create a program to convert Celsius to Fahrenheit using operators.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: તાપમાન કન્વર્ટર</h3>
+                    <p>ઓપરેટર્સનો ઉપયોગ કરીને સેલ્સિયસને ફેરનહાઇટમાં રૂપાંતરિત કરવા માટેનો પ્રોગ્રામ બનાવો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> <span class="variable">celsius</span> = <span class="number">25</span>;
+<span class="keyword">let</span> <span class="variable">fahrenheit</span> = (celsius * <span class="number">9</span>/<span class="number">5</span>) + <span class="number">32</span>;
+console.log(<span class="string">`${celsius}°C = ${fahrenheit}°F`</span>);</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2: Compound Operators -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Score Calculator</h3>
+                    <p>Use compound operators to track game scores.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: સ્કોર કેલ્ક્યુલેટર</h3>
+                    <p>ગેમ સ્કોર્સને ટ્રૅક કર૵ માટે કમ્પાઉન્ડ ઓપરેટર્સનો ઉપયોગ કરો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> <span class="variable">score</span> = <span class="number">0</span>;
+
+score += <span class="number">10</span>;  <span class="comment">// Win a game</span>
+score *= <span class="number">2</span>;   <span class="comment">// Double bonus</span>
+score -= <span class="number">5</span>;   <span class="comment">// Penalty</span>
+
+console.log(<span class="string">"Final score:"</span>, score);</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3: Comparison Operators -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Age Validator</h3>
+                    <p>Use comparison operators to validate age requirements.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસ���ત 3: ઉંમર વેલિડેટર</h3>
+                    <p>ઉંમર આવશ્યકતાઓને માન્ય કરવા માટે તુલના ઓપરેટર્સનો ઉપયોગ કરો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> <span class="variable">age</span> = <span class="number">18</span>;
+<span class="keyword">let</span> <span class="variable">isAdult</span> = age >= <span class="number">18</span>;
+<span class="keyword">let</span> <span class="variable">isSenior</span> = age >= <span class="number">65</span>;
+<span class="keyword">let</span> <span class="variable">isTeenager</span> = age >= <span class="number">13</span> && age <= <span class="number">19</span>;
+
+console.log(<span class="string">"Is adult?"</span>, isAdult);
+console.log(<span class="string">"Is senior?"</span>, isSenior);
+console.log(<span class="string">"Is teenager?"</span>, isTeenager);</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge Exercise -->
+            <div class="exercise-card challenge">
+                <div class="en active">
+                    <h3>🏆 Final Challenge: Shopping Cart Calculator</h3>
+                    <p>Create a complete shopping cart calculator using various operators.</p>
+                </div>
+                <div class="gu">
+                    <h3>🏆 અંતિમ ચેલેન્જ: શોપિંગ કાર્ટ કેલ્ક્યુલેટર</h3>
+                    <p>વિવિધ ઓપરેટર્સનો ઉપયોગ કરીને સંપૂર્ણ શોપિંગ કાર્ટ કેલ્ક્યુલેટર બનાવો.</p>
+                </div>
+                <button class="hint-btn" data-hint="challenge">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="challenge-hint">
+                    <div class="code-example">
+                        <pre><span class="comment">// Item prices</span>
+<span class="keyword">let</span> <span class="variable">prices</span> = [<span class="number">29.99</span>, <span class="number">49.99</span>, <span class="number">19.99</span>];
+<span class="keyword">let</span> <span class="variable">quantities</span> = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>];
+
+<span class="comment">// Calculate subtotal</span>
+<span class="keyword">let</span> <span class="variable">subtotal</span> = <span class="number">0</span>;
+<span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i < prices.length; i++) {
+    subtotal += prices[i] * quantities[i];
+}
+
+<span class="comment">// Apply discount if subtotal > $100</span>
+<span class="keyword">const</span> <span class="variable">discount</span> = subtotal > <span class="number">100</span> ? <span class="number">0.1</span> : <span class="number">0</span>;
+<span class="keyword">const</span> <span class="variable">discountAmount</span> = subtotal * discount;
+
+<span class="comment">// Calculate tax (8%)</span>
+<span class="keyword">const</span> <span class="variable">tax</span> = subtotal * <span class="number">0.08</span>;
+
+<span class="comment">// Calculate final total</span>
+<span class="keyword">const</span> <span class="variable">total</span> = subtotal - discountAmount + tax;
+
+console.log(<span class="string">`Subtotal: $${subtotal.toFixed(2)}`</span>);
+console.log(<span class="string">`Discount: $${discountAmount.toFixed(2)}`</span>);
+console.log(<span class="string">`Tax: $${tax.toFixed(2)}`</span>);
+console.log(<span class="string">`Total: $${total.toFixed(2)}`</span>);</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add this after your existing exercises section -->
+        <div class="section-card quiz-section">
+            <div class="en active">
+                <h2><i class="fas fa-question-circle"></i> Quick Quiz</h2>
+                <p>Test your understanding of operators!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-question-circle"></i> ઝડપી ક્વિઝ</h2>
+                <p>ઓપરેટર્સની તમારી સમજ ચકાસો!</p>
+            </div>
+
+            <!-- Question 1 -->
+            <div class="quiz-card">
+                <div class="en active">
+                    <h3>Q1: What will be the output?</h3>
+                    <pre>let x = 5;
+let y = "5";
+console.log(x == y);
+console.log(x === y);</pre>
+                </div>
+                <div class="gu">
+                    <h3>પ્ર1: આઉટપુટ શું આવશે?</h3>
+                    <pre>let x = 5;
+let y = "5";
+console.log(x == y);
+console.log(x === y);</pre>
+                </div>
+                <button class="hint-btn" data-hint="q1">
+                    <i class="fas fa-lightbulb"></i> Show Answer
+                </button>
+                <div class="hint-content hidden" id="q1-hint">
+                    <div class="en active">
+                        <p>Output will be:</p>
+                        <pre>true
+false</pre>
+                        <p>Explanation: == compares values after type conversion, while === compares both value and
+                            type.</p>
+                    </div>
+                    <div class="gu">
+                        <p>આઉટપુટ આવશે:</p>
+                        <pre>true
+false</pre>
+                        <p>સમજૂતી: == ટાઈપ કન્વર્ઝન પછી વેલ્યુની તુલના કરે છે, જ્યારે === વેલ્યુ અને ટાઈપ બંનેની તુલના
+                            કરે છે.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-card">
+                <div class="en active">
+                    <h3>Q2: What's the result?</h3>
+                    <pre>let a = true;
+let b = false;
+let c = true;
+console.log(a && b || c);</pre>
+                </div>
+                <div class="gu">
+                    <h3>પ્ર2: પરિણામ શું આવશે?</h3>
+                    <pre>let a = true;
+let b = false;
+let c = true;
+console.log(a && b || c);</pre>
+                </div>
+                <button class="hint-btn" data-hint="q2">
+                    <i class="fas fa-lightbulb"></i> Show Answer
+                </button>
+                <div class="hint-content hidden" id="q2-hint">
+                    <div class="en active">
+                        <p>Output: true</p>
+                        <p>Explanation: && has higher precedence than ||<br>
+                            (a && b) evaluates to false, then false || c evaluates to true</p>
+                    </div>
+                    <div class="gu">
+                        <p>આઉટપુટ: true</p>
+                        <p>સમજૂતી: && ની પ્રાથમિકતા || કરતાં વધારે છે<br>
+                            (a && b) false થાય છે, પછી false || c true થાય છે</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-card">
+                <div class="en active">
+                    <h3>Q3: Predict the output</h3>
+                    <pre>let x = 10;
+let y = x++;
+let z = ++x;
+console.log(y, z);</pre>
+                </div>
+                <div class="gu">
+                    <h3>પ્ર3: આઉટપુટની આગાહી કરો</h3>
+                    <pre>let x = 10;
+let y = x++;
+let z = ++x;
+console.log(y, z);</pre>
+                </div>
+                <button class="hint-btn" data-hint="q3">
+                    <i class="fas fa-lightbulb"></i> Show Answer
+                </button>
+                <div class="hint-content hidden" id="q3-hint">
+                    <div class="en active">
+                        <p>Output: 10 12</p>
+                        <p>Explanation:<br>
+                            1. y = x++ assigns 10 to y, then increments x to 11<br>
+                            2. z = ++x increments x to 12, then assigns 12 to z</p>
+                    </div>
+                    <div class="gu">
+                        <p>આઉટપુટ: 10 12</p>
+                        <p>સમજૂતી:<br>
+                            1. y = x++ y ને 10 આપે છે, પછી x ને વધારીને 11 કરે છે<br>
+                            2. z = ++x x ને વધારીને 12 કરે છે, પછી z ને 12 આપે છે</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-card challenge">
+                <div class="en active">
+                    <h3>Q4: Debug Challenge</h3>
+                    <p>Find and fix the errors in this code:</p>
+                    <pre>let price = "10";
+let quantity = 2;
+let total = price + quantity;
+console.log("Total: $" + total);</pre>
+                </div>
+                <div class="gu">
+                    <h3>પ્ર4: ડીબગ ચેલેન્જ</h3>
+                    <p>આ કોડમાં ભૂલો શોધો અને સુધારો:</p>
+                    <pre>let price = "10";
+let quantity = 2;
+let total = price + quantity;
+console.log("Total: $" + total);</pre>
+                </div>
+                <button class="hint-btn" data-hint="q4">
+                    <i class="fas fa-lightbulb"></i> Show Answer
+                </button>
+                <div class="hint-content hidden" id="q4-hint">
+                    <div class="en active">
+                        <p>Fixed code:</p>
+                        <pre>let price = Number("10");  // or parseInt("10")
+let quantity = 2;
+let total = price * quantity;  // use * instead of +
+console.log("Total: $" + total);</pre>
+                        <p>Issues:<br>
+                            1. String concatenation instead of multiplication<br>
+                            2. Price needs to be converted to number<br>
+                            3. Wrong operator for calculation</p>
+                    </div>
+                    <div class="gu">
+                        <p>સુધારેલો કોડ:</p>
+                        <pre>let price = Number("10");  // અથવા parseInt("10")
+let quantity = 2;
+let total = price * quantity;  // + ની જગ્યાએ * વાપરો
+console.log("Total: $" + total);</pre>
+                        <p>સમસ્યાઓ:<br>
+                            1. ગુણાકાર ની જગ્યાએ સ્ટ્રિંગ જોડાણ થયું<br>
+                            2. Price ને નંબરમાં કન્વર્ટ કરવાની જરૂર છે<br>
+                            3. ગણતરી માટે ખોટો ઓપરેટર</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script2/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script4/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

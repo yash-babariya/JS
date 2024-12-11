@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Events Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript Events</h1>
+                <p>Learn about different types of events and how to handle them</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript ઇવેન્ટ્સ</h1>
+                <p>વિવિધ પ્રકારના ઇવેન્ટ્સ અને તેમને કેવી રીતે હેન્ડલ કરવા તે શીખો</p>
+            </div>
+        </div>
+
+        <!-- Mouse Events -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Mouse Events</h2>
+                <p>Common mouse interactions</p>
+            </div>
+            <div class="gu">
+                <h2>માઉસ ઇવેન્ટ્સ</h2>
+                <p>સામાન્ય માઉસ ઇન્ટરેક્શન્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Click events</span>
+element.addEventListener(<span class="string">'click'</span>, function(e) {
+    console.log(<span class="string">'Clicked!'</span>);
+});
+
+<span class="comment">// Mouse over/out</span>
+element.addEventListener(<span class="string">'mouseover'</span>, function(e) {
+    console.log(<span class="string">'Mouse over'</span>);
+});
+
+element.addEventListener(<span class="string">'mouseout'</span>, function(e) {
+    console.log(<span class="string">'Mouse out'</span>);
+});</pre>
+            </div>
+        </div>
+
+        <!-- Keyboard Events -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Keyboard Events</h2>
+                <p>Handling keyboard interactions</p>
+            </div>
+            <div class="gu">
+                <h2>કીબોર્ડ ઇવેન્ટ્સ</h2>
+                <p>કીબોર્ડ ઇન્ટરેક્શન્સ હેન્ડલ કરવા</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Key press</span>
+document.addEventListener(<span class="string">'keypress'</span>, function(e) {
+    console.log(<span class="string">`Key pressed: ${e.key}`</span>);
+});
+
+<span class="comment">// Key down/up</span>
+document.addEventListener(<span class="string">'keydown'</span>, function(e) {
+    console.log(<span class="string">`Key down: ${e.key}`</span>);
+});
+
+document.addEventListener(<span class="string">'keyup'</span>, function(e) {
+    console.log(<span class="string">`Key up: ${e.key}`</span>);
+});</pre>
+            </div>
+        </div>
+
+        <!-- Form Events -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Form Events</h2>
+                <p>Working with form interactions</p>
+            </div>
+            <div class="gu">
+                <h2>ફોર્મ ઇવેન્ટ્સ</h2>
+                <p>ફોર્મ ઇન્ટરેક્શન્સ સાથે કામ કરવું</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Form submission</span>
+form.addEventListener(<span class="string">'submit'</span>, function(e) {
+    e.preventDefault();
+    console.log(<span class="string">'Form submitted'</span>);
+});
+
+<span class="comment">// Input changes</span>
+input.addEventListener(<span class="string">'change'</span>, function(e) {
+    console.log(<span class="string">'Input changed'</span>);
+});
+
+<span class="comment">// Input focus/blur</span>
+input.addEventListener(<span class="string">'focus'</span>, function(e) {
+    console.log(<span class="string">'Input focused'</span>);
+});</pre>
+            </div>
+        </div>
+
+        <!-- Event Bubbling and Delegation -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Event Bubbling and Delegation</h2>
+                <p>Understanding event propagation</p>
+            </div>
+            <div class="gu">
+                <h2>ઇવેન્ટ બબલિંગ અને ડેલિગેશન</h2>
+                <p>ઇવેન્ટ પ્રોપેગેશન સમજવું</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Event bubbling</span>
+child.addEventListener(<span class="string">'click'</span>, function(e) {
+    e.stopPropagation();  <span class="comment">// Stop bubbling</span>
+});
+
+<span class="comment">// Event delegation</span>
+parent.addEventListener(<span class="string">'click'</span>, function(e) {
+    if (e.target.matches(<span class="string">'.child'</span>)) {
+        console.log(<span class="string">'Child clicked'</span>);
+    }
+});</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your event handling skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી ���વેન્ટ હેન્ડલિંગ સ્કિલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Interactive Button</h3>
+                    <p>Create a button that changes appearance on different mouse events</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: ઇન્ટરેક્ટિવ બટન</h3>
+                    <p>વિવિધ માઉસ ઇવેન્ટ્સ પર દેખાવ બદલતું બટન બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> btn = document.querySelector(<span class="string">'.interactive-btn'</span>);
+
+btn.addEventListener(<span class="string">'mouseover'</span>, () => {
+    btn.classList.add(<span class="string">'hover'</span>);
+});
+
+btn.addEventListener(<span class="string">'mouseout'</span>, () => {
+    btn.classList.remove(<span class="string">'hover'</span>);
+});
+
+btn.addEventListener(<span class="string">'click'</span>, () => {
+    btn.classList.toggle(<span class="string">'active'</span>);
+});</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Form Validation</h3>
+                    <p>Create real-time form validation with event handling</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: ફોર્મ વેલિડેશન</h3>
+                    <p>ઇવેન્ટ હેન્ડલિંગ સાથે રીયલ-ટાઇમ ફોર્મ વેલિડેશન બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> form = document.querySelector(<span class="string">'form'</span>);
+<span class="keyword">const</span> input = form.querySelector(<span class="string">'input'</span>);
+
+input.addEventListener(<span class="string">'input'</span>, function() {
+    <span class="keyword">if</span> (this.value.length < 3) {
+        this.classList.add(<span class="string">'invalid'</span>);
+        this.classList.remove(<span class="string">'valid'</span>);
+    } <span class="keyword">else</span> {
+        this.classList.add(<span class="string">'valid'</span>);
+        this.classList.remove(<span class="string">'invalid'</span>);
+    }
+});</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Keyboard Game</h3>
+                    <p>Create a simple game using keyboard events</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: કીબોર્ડ ગેમ</h3>
+                    <p>કીબોર્ડ ઇવેન્ટ્સનો ઉપયોગ કરીને સરળ ગેમ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> player = document.querySelector(<span class="string">'.player'</span>);
+<span class="keyword">let</span> position = { x: 0, y: 0 };
+
+document.addEventListener(<span class="string">'keydown'</span>, function(e) {
+    switch(e.key) {
+        case <span class="string">'ArrowUp'</span>:
+            position.y -= 10;
+            break;
+        case <span class="string">'ArrowDown'</span>:
+            position.y += 10;
+            break;
+        case <span class="string">'ArrowLeft'</span>:
+            position.x -= 10;
+            break;
+        case <span class="string">'ArrowRight'</span>:
+            position.x += 10;
+            break;
+    }
+    player.style.transform = 
+        `translate(${position.x}px, ${position.y}px)`;
+});</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script9/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script11/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

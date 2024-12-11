@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Console.log Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript Console.log Guide</h1>
+                <p>Learn how to use console.log() for debugging and development.</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript Console.log માર્ગદર્શિકા</h1>
+                <p>ડીબગિંગ અને ડેવલપમેન્ટ માટે console.log() નો ઉપયોગ કેવી રીતે કરવો તે શીખો.</p>
+            </div>
+        </div>
+
+        <!-- Code Examples -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Basic Examples</h2>
+            </div>
+            <div class="gu">
+                <h2>મૂળભૂત ઉદાહરણો</h2>
+            </div>
+
+            <div class="code-example">
+                <button class="copy-btn" title="Copy code">
+                    <i class="fas fa-copy"></i>
+                </button>
+                <pre><span class="comment">// Basic console.log examples</span>
+<span class="keyword">console</span>.<span class="function">log</span>(<span class="string">"Hello World!"</span>);      <span class="comment">// English</span>
+<span class="keyword">console</span>.<span class="function">log</span>(<span class="string">"નમસ્તે દુનિયા!"</span>);    <span class="comment">// Gujarati</span>
+<span class="keyword">console</span>.<span class="function">log</span>(<span class="number">123</span>);                <span class="comment">// Numbers</span>
+<span class="keyword">console</span>.<span class="function">log</span>([<span class="string">"apple"</span>, <span class="string">"કેરી"</span>]);   <span class="comment">// Mixed array</span></pre>
+            </div>
+        </div>
+        <!-- Add this after your existing practice section -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Basic Output</h3>
+                    <p>Print your name and age using console.log</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: બેસિક આઉટપુટ</h3>
+                    <p>console.log નો ઉપયોગ કરીને તમારું નામ અને ઉંમર પ્રિન્ટ કરો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="comment">// Your solution should look like this:</span>
+console.log("Name: John Doe");
+console.log("Age: 25");</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Multiple Values</h3>
+                    <p>Print an array of your favorite colors and their RGB values</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: મલ્ટીપલ વેલ્યુ</h3>
+                    <p>તમારા મનપસંદ રંગો અને તેમની RGB વેલ્યુની એરે પ્રિન્ટ કરો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="comment">// Create an array of colors</span>
+const colors = [
+    { name: "Red", rgb: "rgb(255, 0, 0)" },
+    { name: "Blue", rgb: "rgb(0, 0, 255)" }
+];
+console.log("My favorite colors:", colors);</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Console Methods</h3>
+                    <p>Try different console methods: log, warn, error, info</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: કન્સોલ મેથડ્સ</h3>
+                    <p>વિવિધ કન્સોલ મેથડ્સ પ્રયાસ કરો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="comment">// Example usage</span>
+console.log("This is a log message");
+console.warn("This is a warning");
+console.error("This is an error");
+console.info("This is an info message");</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <button class="nav-btn next-btn" onclick="window.location.href='../script2/index.html'">
+                <span class="en active">Next</span>
+                <span class="gu">આગળ</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Interview Questions - Part 2</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- DOM and Events Questions -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>DOM and Events Questions (Part 2)</h2>
+                <div class="code-example">
+                    <pre><span class="comment">// Section 1: DOM Manipulation</span>
+
+21. What are different ways to select DOM elements?
+    Example:
+    document.getElementById('id')
+    document.querySelector('.class')
+    document.querySelectorAll('div')
+    document.getElementsByClassName('class')
+    document.getElementsByTagName('div')
+
+22. How do you create and append DOM elements?
+    Example:
+    const div = document.createElement('div');
+    div.textContent = 'New Element';
+    parent.appendChild(div);
+
+23. What is the difference between innerHTML and textContent?
+    Answer: innerHTML parses HTML content,
+    textContent treats everything as text
+
+24. Explain DOM traversal methods
+    Example:
+    element.parentNode
+    element.childNodes
+    element.nextSibling
+    element.previousSibling
+    element.firstChild
+    element.lastChild
+
+25. How do you handle DOM performance optimization?
+    Example:
+    const fragment = document.createDocumentFragment();
+    items.forEach(item => {
+        const div = document.createElement('div');
+        fragment.appendChild(div);
+    });
+    container.appendChild(fragment);
+
+<span class="comment">// Section 2: Event Handling</span>
+
+26. What is event bubbling and capturing?
+    Example:
+    element.addEventListener('click', handler, true); // Capturing
+    element.addEventListener('click', handler, false); // Bubbling
+
+27. How do you implement event delegation?
+    Example:
+    parent.addEventListener('click', (e) => {
+        if (e.target.matches('.child')) {
+            // Handle child click
+        }
+    });
+
+28. What are custom events?
+    Example:
+    const event = new CustomEvent('myEvent', {
+        detail: { data: 'Custom data' }
+    });
+    element.dispatchEvent(event);
+
+29. Explain different mouse events
+    Example:
+    mousedown, mouseup, click, dblclick,
+    mouseover, mouseout, mousemove
+
+30. How do you handle touch events?
+    Example:
+    element.addEventListener('touchstart', handleTouch);
+    element.addEventListener('touchmove', handleTouch);
+    element.addEventListener('touchend', handleTouch);
+
+<span class="comment">// Section 3: ES6+ Features</span>
+
+31. What are template literals and tagged templates?
+    Example:
+    const name = 'John';
+    const greeting = `Hello ${name}`;
+    
+    function tag(strings, ...values) {
+        return strings.reduce((result, str, i) => 
+            `${result}${str}${values[i] || ''}`
+        , '');
+    }
+
+32. Explain destructuring with examples
+    Example:
+    const { name, age } = person;
+    const [first, ...rest] = array;
+    const { a: renamed } = obj;
+
+33. How do modules work in ES6?
+    Example:
+    // module.js
+    export const helper = () => {};
+    export default class Main {};
+    
+    // main.js
+    import Main, { helper } from './module.js';
+
+34. What are the new array methods in ES6+?
+    Example:
+    array.includes()
+    array.flat()
+    array.flatMap()
+    array.at()
+
+35. Explain optional chaining and nullish coalescing
+    Example:
+    const value = obj?.nested?.property ?? defaultValue;
+
+<span class="comment">// Section 4: Performance Optimization</span>
+
+36. How do you optimize JavaScript performance?
+    - Use appropriate data structures
+    - Minimize DOM operations
+    - Implement debouncing/throttling
+    - Use web workers for heavy computation
+    - Optimize loops and recursion
+
+37. What is memoization?
+    Example:
+    const memoize = (fn) => {
+        const cache = new Map();
+        return (...args) => {
+            const key = JSON.stringify(args);
+            if (cache.has(key)) return cache.get(key);
+            const result = fn.apply(this, args);
+            cache.set(key, result);
+            return result;
+        };
+    };
+
+38. How do you handle memory leaks?
+    - Clear intervals and timeouts
+    - Remove event listeners
+    - Clean up references
+    - Use WeakMap/WeakSet
+    - Proper closure management
+
+39. Explain lazy loading
+    Example:
+    const lazyImage = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.src = entry.target.dataset.src;
+            }
+        });
+    });
+
+40. What is code splitting?
+    Example:
+    // Dynamic import
+    import('./module.js').then(module => {
+        module.doSomething();
+    });</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script19/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script21/index.html'">
+                    <span class="en active">Next Part</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

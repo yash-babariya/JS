@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Functions Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript Functions</h1>
+                <p>Learn how to create and use functions in JavaScript</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript ફંક્શન્સ</h1>
+                <p>JavaScript માં ફંક્શન્સ કેવી રીતે બનાવવા અને વાપરવા તે શીખો</p>
+            </div>
+        </div>
+
+        <!-- Function Declaration -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Function Declaration</h2>
+                <p>Basic way to define a function</p>
+            </div>
+            <div class="gu">
+                <h2>ફંક્શન ડેક્લેરેશન</h2>
+                <p>ફંક્શન વ્યાખ્યાયિત કરવાની મૂળભૂત રીત</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Basic function</span>
+<span class="keyword">function</span> <span class="function">greet</span>() {
+    console.log(<span class="string">"Hello!"</span>);
+}
+
+<span class="comment">// Function with parameters</span>
+<span class="keyword">function</span> <span class="function">greetUser</span>(name) {
+    console.log(<span class="string">`Hello, ${name}!`</span>);
+}
+
+<span class="comment">// Function with return value</span>
+<span class="keyword">function</span> <span class="function">add</span>(a, b) {
+    <span class="keyword">return</span> a + b;
+}</pre>
+            </div>
+        </div>
+
+        <!-- Function Expression -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Function Expression</h2>
+                <p>Assigning a function to a variable</p>
+            </div>
+            <div class="gu">
+                <h2>ફંક્શન એક્સપ્રેશન</h2>
+                <p>વેરિએબલમાં ફંક્શન એસાઇન કરવું</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Function expression</span>
+<span class="keyword">const</span> multiply = <span class="keyword">function</span>(x, y) {
+    <span class="keyword">return</span> x * y;
+};
+
+<span class="comment">// Arrow function</span>
+<span class="keyword">const</span> square = (x) => x * x;
+
+<span class="comment">// Using function expressions</span>
+console.log(multiply(<span class="number">4</span>, <span class="number">5</span>));  <span class="comment">// 20</span>
+console.log(square(<span class="number">4</span>));      <span class="comment">// 16</span></pre>
+            </div>
+        </div>
+
+        <!-- Arrow Functions -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Arrow Functions</h2>
+                <p>Modern way to write concise functions</p>
+            </div>
+            <div class="gu">
+                <h2>એરો ફંક્શન્સ</h2>
+                <p>સંક્ષિપ્ત ફંક્શન્સ લખવાની આધુનિક રીત</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Single parameter</span>
+<span class="keyword">const</span> double = x => x * <span class="number">2</span>;
+
+<span class="comment">// Multiple parameters</span>
+<span class="keyword">const</span> sum = (a, b) => a + b;
+
+<span class="comment">// Multiple lines</span>
+<span class="keyword">const</span> calculate = (a, b) => {
+    <span class="keyword">const</span> result = a * b;
+    <span class="keyword">return</span> result + <span class="number">10</span>;
+};</pre>
+            </div>
+        </div>
+
+        <!-- Default Parameters -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Default Parameters</h2>
+                <p>Setting default values for function parameters</p>
+            </div>
+            <div class="gu">
+                <h2>ડિફૉલ્ટ પેરામીટર્સ</h2>
+                <p>ફંક્શન પેરામીટર્સ માટે ડિફૉલ્ટ વેલ્યુ સેટ કરવી</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">function</span> <span class="function">greetWithTitle</span>(name, title = <span class="string">"Mr."</span>) {
+    console.log(<span class="string">`Hello ${title} ${name}`</span>);
+}
+
+greetWithTitle(<span class="string">"John"</span>);           <span class="comment">// Hello Mr. John</span>
+greetWithTitle(<span class="string">"Jane"</span>, <span class="string">"Dr."</span>);    <span class="comment">// Hello Dr. Jane</span></pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your understanding of functions!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>ફંક્શન્સની તમારી સમજ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Calculator Functions</h3>
+                    <p>Create functions for basic calculator operations (add, subtract, multiply, divide)</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: કેલ્ક્યુલેટર ફંક્શન્સ</h3>
+                    <p>બેઝિક કેલ્ક્યુલેટર ઓપરેશન્સ માટે ફંક્શન્સ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> calculator = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => b !== <span class="number">0</span> ? a / b : <span class="string">"Cannot divide by zero"</span>
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: String Manipulator</h3>
+                    <p>Create functions to manipulate strings (reverse, count vowels, palindrome check)</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: સ્ટ્રિંગ મેનિપ્યુલેટર</h3>
+                    <p>સ્ટ્રિંગ્સને મેનિપ્યુલેટ કરવા માટે ફંક્શન્સ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> stringUtils = {
+    reverse: str => str.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>),
+    countVowels: str => (str.match(/[aeiou]/gi) || []).length,
+    isPalindrome: str => str === str.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Array Helper Functions</h3>
+                    <p>Create functions to work with arrays (find max, min, average)</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: એરે હેલ્પર ફંક્શન્સ</h3>
+                    <p>એરે સાથે કામ કરવા માટે ફંક્શન્સ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> arrayUtils = {
+    findMax: arr => Math.max(...arr),
+    findMin: arr => Math.min(...arr),
+    average: arr => arr.reduce((a, b) => a + b) / arr.length
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script5/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script7/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

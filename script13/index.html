@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Storage Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>Web Storage APIs</h1>
+                <p>Learn about localStorage and sessionStorage</p>
+            </div>
+            <div class="gu">
+                <h1>વેબ સ્ટોરેજ APIs</h1>
+                <p>localStorage અને sessionStorage વિશે શીખો</p>
+            </div>
+        </div>
+
+        <!-- Local Storage -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Local Storage</h2>
+                <p>Persistent storage across browser sessions</p>
+            </div>
+            <div class="gu">
+                <h2>લોકલ સ્ટોરેજ</h2>
+                <p>બ્રાઉઝર સેશન્સ દરમિયાન કાયમી સ્ટોરેજ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Storing data</span>
+localStorage.setItem(<span class="string">'username'</span>, <span class="string">'John'</span>);
+localStorage.setItem(<span class="string">'preferences'</span>, JSON.stringify({
+    theme: <span class="string">'dark'</span>,
+    fontSize: <span class="string">'large'</span>
+}));
+
+<span class="comment">// Retrieving data</span>
+<span class="keyword">const</span> username = localStorage.getItem(<span class="string">'username'</span>);
+<span class="keyword">const</span> preferences = JSON.parse(localStorage.getItem(<span class="string">'preferences'</span>));</pre>
+            </div>
+        </div>
+
+        <!-- Session Storage -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Session Storage</h2>
+                <p>Temporary storage for current session</p>
+            </div>
+            <div class="gu">
+                <h2>સેશન સ્ટોરેજ</h2>
+                <p>વર્તમાન સેશન માટે કામચલાઉ સ્ટોરેજ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Storing session data</span>
+sessionStorage.setItem(<span class="string">'currentPage'</span>, <span class="string">'home'</span>);
+sessionStorage.setItem(<span class="string">'tempData'</span>, JSON.stringify({
+    id: 123,
+    status: <span class="string">'active'</span>
+}));
+
+<span class="comment">// Retrieving session data</span>
+<span class="keyword">const</span> currentPage = sessionStorage.getItem(<span class="string">'currentPage'</span>);
+<span class="keyword">const</span> tempData = JSON.parse(sessionStorage.getItem(<span class="string">'tempData'</span>));</pre>
+            </div>
+        </div>
+
+        <!-- Storage Management -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Storage Management</h2>
+                <p>Managing stored data</p>
+            </div>
+            <div class="gu">
+                <h2>સ્ટોરેજ મેનેજમેન્ટ</h2>
+                <p>સ્ટોર કરેલા ડેટાનું મેનેજમેન્ટ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Removing specific items</span>
+localStorage.removeItem(<span class="string">'username'</span>);
+sessionStorage.removeItem(<span class="string">'tempData'</span>);
+
+<span class="comment">// Clearing all storage</span>
+localStorage.clear();
+sessionStorage.clear();
+
+<span class="comment">// Checking storage size</span>
+<span class="keyword">const</span> localStorageSize = JSON.stringify(localStorage).length;
+<span class="keyword">const</span> sessionStorageSize = JSON.stringify(sessionStorage).length;</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your storage handling skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી સ્ટોરેજ હેન્ડલિંગ સ્કિલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: User Preferences</h3>
+                    <p>Create a system to manage user preferences using localStorage</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: યુઝર પ્રેફરન્સીસ</h3>
+                    <p>localStorage નો ઉપયોગ કરીને યુઝર પ્રેફરન્સીસ મેનેજ કરવાની સિસ્ટમ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> userPreferences = {
+    save(preferences) {
+        localStorage.setItem(<span class="string">'userPrefs'</span>, 
+            JSON.stringify(preferences));
+    },
+    load() {
+        <span class="keyword">const</span> prefs = localStorage.getItem(<span class="string">'userPrefs'</span>);
+        <span class="keyword">return</span> prefs ? JSON.parse(prefs) : {};
+    },
+    update(key, value) {
+        <span class="keyword">const</span> prefs = this.load();
+        prefs[key] = value;
+        this.save(prefs);
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Shopping Cart</h3>
+                    <p>Implement a shopping cart using sessionStorage</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: શોપિંગ કાર્ટ</h3>
+                    <p>sessionStorage નો ઉપયોગ કરીને શોપિંગ કાર્ટ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> shoppingCart = {
+    addItem(item) {
+        <span class="keyword">const</span> cart = this.getCart();
+        cart.push(item);
+        sessionStorage.setItem(<span class="string">'cart'</span>, 
+            JSON.stringify(cart));
+    },
+    getCart() {
+        <span class="keyword">return</span> JSON.parse(
+            sessionStorage.getItem(<span class="string">'cart'</span>) || <span class="string">'[]'</span>
+        );
+    },
+    clearCart() {
+        sessionStorage.removeItem(<span class="string">'cart'</span>);
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Storage Monitor</h3>
+                    <p>Create a utility to monitor storage usage</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: સ્ટોરેજ મોનિટર</h3>
+                    <p>સ્ટોરેજ વપરાશ મોનિટર કરવા માટે યુટિલિટી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> storageMonitor = {
+    getStorageInfo() {
+        <span class="keyword">return</span> {
+            local: {
+                size: JSON.stringify(localStorage).length,
+                items: Object.keys(localStorage).length
+            },
+            session: {
+                size: JSON.stringify(sessionStorage).length,
+                items: Object.keys(sessionStorage).length
+            }
+        };
+    },
+    displayUsage() {
+        <span class="keyword">const</span> info = this.getStorageInfo();
+        console.table(info);
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script12/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script14/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Advanced Arrays</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>Advanced Array Operations</h1>
+                <p>Advanced concepts and practical applications of JavaScript Arrays</p>
+            </div>
+            <div class="gu">
+                <h1>એડવાન્સ્ડ એરે ઓપરેશન્સ</h1>
+                <p>જાવાસ્ક્રિપ્ટ એરેના એડવાન્સ્ડ કોન્સેપ્ટ્સ અને પ્રેક્ટિકલ એપ્લિકેશન્સ</p>
+            </div>
+        </div>
+
+        <!-- Advanced Array Operations -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Advanced Array Operations</h2>
+                <p>Complex array manipulations and optimizations</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Advanced Array Operations</span>
+<span class="keyword">const</span> arrayOps = {
+    // Chunk array into smaller arrays
+    chunk: (arr, size) => 
+        Array.from({ length: Math.ceil(arr.length / size) }, 
+            (_, i) => arr.slice(i * size, i * size + size)),
+
+    // Create array tree structure
+    toTree: (arr, id = 'id', parentId = 'parentId') => {
+        const nodes = {};
+        return arr.filter(item => {
+            nodes[item[id]] = { ...item, children: [] };
+            const parent = nodes[item[parentId]];
+            parent ? parent.children.push(nodes[item[id]]) : null;
+            return !item[parentId];
+        });
+    },
+
+    // Group array by key
+    groupBy: (arr, key) => 
+        arr.reduce((acc, item) => ({
+            ...acc,
+            [item[key]]: [...(acc[item[key]] || []), item]
+        }), {}),
+
+    // Remove duplicates with custom comparator
+    uniqueBy: (arr, comparator) => 
+        arr.filter((item, index, self) =>
+            index === self.findIndex(t => comparator(item, t)))
+};</pre>
+            </div>
+        </div>
+
+        <!-- Array Performance Optimization -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Performance Optimization</h2>
+                <p>Optimizing array operations for better performance</p>
+            </div>
+            <div class="code-example">
+                <pre><span class="comment">// Performance Optimizations</span>
+<span class="keyword">const</span> arrayPerformance = {
+    // Pre-allocate array size
+    createOptimized: size => new Array(size),
+
+    // Use typed arrays for numeric data
+    createTyped: numbers => new Float64Array(numbers),
+
+    // Batch operations
+    batchProcess: (arr, batchSize, processor) => {
+        const results = [];
+        for(let i = 0; i < arr.length; i += batchSize) {
+            const batch = arr.slice(i, i + batchSize);
+            results.push(...processor(batch));
+        }
+        return results;
+    },
+
+    // Optimize searching
+    optimizedSearch: (arr, value) => {
+        // For small arrays
+        if(arr.length < 100) return arr.indexOf(value);
+        
+        // For large arrays
+        const set = new Set(arr);
+        return set.has(value);
+    }
+};</pre>
+            </div>
+        </div>
+
+        <!-- Practical Applications -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Practical Applications</h2>
+                <p>Real-world array usage examples</p>
+            </div>
+            <div class="code-example">
+                <pre><span class="comment">// Data Processing</span>
+<span class="keyword">const</span> dataProcessor = {
+    // Calculate statistics
+    statistics: arr => ({
+        mean: arr.reduce((a, b) => a + b) / arr.length,
+        median: arr.sort((a, b) => a - b)[Math.floor(arr.length / 2)],
+        mode: arr.reduce((acc, val) => {
+            acc[val] = (acc[val] || 0) + 1;
+            return acc;
+        }, {})
+    }),
+
+    // Data transformation
+    transform: data => ({
+        normalize: () => data.map(x => (x - Math.min(...data)) / 
+            (Math.max(...data) - Math.min(...data))),
+        standardize: () => {
+            const mean = data.reduce((a, b) => a + b) / data.length;
+            const std = Math.sqrt(data.reduce((a, b) => 
+                a + Math.pow(b - mean, 2)) / data.length);
+            return data.map(x => (x - mean) / std);
+        }
+    })
+};</pre>
+            </div>
+        </div>
+
+        <!-- Exercises -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Advanced Array Exercises</h2>
+                <p>Practice advanced array concepts</p>
+            </div>
+
+            <!-- Exercise 1: Data Processing -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Data Processing Pipeline</h3>
+                    <p>Create a data processing pipeline using array methods</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> dataPipeline = {
+    process: data => data
+        .filter(x => x.valid)
+        .map(x => ({
+            ...x,
+            processed: true,
+            timestamp: Date.now()
+        }))
+        .sort((a, b) => b.priority - a.priority)
+        .reduce((acc, item) => {
+            acc[item.category] = acc[item.category] || [];
+            acc[item.category].push(item);
+            return acc;
+        }, {})
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2: Memory Optimization -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Memory Optimization</h3>
+                    <p>Optimize array operations for memory usage</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> memoryOptimizer = {
+    processLargeArray: function* (arr) {
+        const batchSize = 1000;
+        for(let i = 0; i < arr.length; i += batchSize) {
+            yield arr.slice(i, i + batchSize);
+        }
+    },
+    
+    optimizedFilter: (arr, predicate) => {
+        const indices = [];
+        for(let i = 0; i < arr.length; i++) {
+            if(predicate(arr[i])) indices.push(i);
+        }
+        return indices.map(i => arr[i]);
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script17/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script19/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

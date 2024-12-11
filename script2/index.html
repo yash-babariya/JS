@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Variables Guide</title>
+    <style>
+        .nav-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .variable-type-card {
+            border-left: 4px solid var(--accent);
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: linear-gradient(160deg, rgba(157, 78, 221, 0.1) 0%, rgba(123, 44, 191, 0.1) 100%);
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript Variables Guide</h1>
+                <p>Learn about different types of variables in JavaScript.</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript વેરિએબલ્સ માર્ગદર્શિકા</h1>
+                <p>JavaScript માં વિવિધ પ્રકારના વેરિએબલ્સ વિશે જાણો.</p>
+            </div>
+        </div>
+
+        <!-- Let Variables -->
+        <div class="variable-type-card">
+            <div class="en active">
+                <h2><i class="fas fa-code"></i> let Variables</h2>
+                <p>Use 'let' for values that can change over time.</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-code"></i> let વેરિએબલ્સ</h2>
+                <p>'let' નો ઉપયોગ એવા વેલ્યુ માટે કરો જે સમય સાથે બદલાઈ શકે છે.</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn" title="Copy code">
+                    <i class="fas fa-copy"></i>
+                </button>
+                <pre><span class="comment">// let examples</span>
+<span class="keyword">let</span> <span class="variable">name</span> = <span class="string">"John"</span>;
+<span class="variable">name</span> = <span class="string">"Jane"</span>;    <span class="comment">// Can be changed</span>
+
+<span class="keyword">let</span> <span class="variable">score</span> = <span class="number">0</span>;
+<span class="variable">score</span> = <span class="number">100</span>;      <span class="comment">// Can be updated</span></pre>
+            </div>
+        </div>
+
+        <!-- Const Variables -->
+        <div class="variable-type-card">
+            <div class="en active">
+                <h2><i class="fas fa-lock"></i> const Variables</h2>
+                <p>Use 'const' for values that should never change.</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-lock"></i> const વેરિએબલ્સ</h2>
+                <p>'const' નો ઉપયોગ એવા વેલ્યુ માટે કરો જે ક્યારેય બદલવા ના હોય.</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn" title="Copy code">
+                    <i class="fas fa-copy"></i>
+                </button>
+                <pre><span class="comment">// const examples</span>
+<span class="keyword">const</span> <span class="variable">PI</span> = <span class="number">3.14159</span>;
+<span class="keyword">const</span> <span class="variable">API_KEY</span> = <span class="string">"abc123"</span>;
+
+<span class="comment">// Cannot be reassigned:</span>
+<span class="comment">// PI = 3.14; // This will cause an error!</span></pre>
+            </div>
+        </div>
+
+        <!-- Var Variables -->
+        <div class="variable-type-card">
+            <div class="en active">
+                <h2><i class="fas fa-exclamation-triangle"></i> var Variables (Legacy)</h2>
+                <p>Older way of declaring variables (not recommended for modern JavaScript).</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-exclamation-triangle"></i> var વેરિએબલ્સ (જૂનું)</h2>
+                <p>વેરિએબલ્સ ડિક્લેર કરવાની જૂની રીત (આધુનિક JavaScript માટે ભલામણ કરાતી નથી).</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn" title="Copy code">
+                    <i class="fas fa-copy"></i>
+                </button>
+                <pre><span class="comment">// var examples (avoid using)</span>
+<span class="keyword">var</span> <span class="variable">oldVariable</span> = <span class="string">"Hello"</span>;
+<span class="keyword">var</span> <span class="variable">count</span> = <span class="number">1</span>;</pre>
+            </div>
+        </div>
+
+        <!-- Add this after your existing content -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Try these exercises to master JavaScript variables!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>JavaScript વેરિએબલ્સને માસ્ટર કરવા માટે આ કસરતો કરો!</p>
+            </div>
+
+            <!-- Exercise 1: Basic Variables -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Personal Info Variables</h3>
+                    <p>Create variables for your personal information using appropriate data types.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: વ્યક્તિગત માહિતી વેરિએબલ્સ</h3>
+                    <p>યોગ્ય ડેટા પ્રકારનો ઉપયોગ કરીને તમારી વ્યક્તિગત માહિતી માટે વેરિએબલ્સ બનાવો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> <span class="variable">name</span> = <span class="string">"John Doe"</span>;
+<span class="keyword">const</span> <span class="variable">birthYear</span> = <span class="number">1995</span>;
+<span class="keyword">let</span> <span class="variable">isStudent</span> = <span class="keyword">true</span>;
+<span class="keyword">let</span> <span class="variable">hobbies</span> = [<span class="string">"reading"</span>, <span class="string">"coding"</span>];</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2: Variable Operations -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Shopping Cart Variables</h3>
+                    <p>Create variables for a shopping cart and calculate the total.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: શોપિંગ કાર્ટ વેરિએબલ્સ</h3>
+                    <p>શોપિંગ કાર્ટ માટે વેરિએબલ્સ બનાવો અને કુલ રકમની ગણતરી કરો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> <span class="variable">item1Price</span> = <span class="number">29.99</span>;
+<span class="keyword">let</span> <span class="variable">item2Price</span> = <span class="number">49.99</span>;
+<span class="keyword">let</span> <span class="variable">quantity1</span> = <span class="number">2</span>;
+<span class="keyword">let</span> <span class="variable">quantity2</span> = <span class="number">1</span>;
+
+<span class="keyword">const</span> <span class="variable">total</span> = (item1Price * quantity1) + (item2Price * quantity2);
+console.log(<span class="string">"Total: $"</span> + total);</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3: const vs let -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: const vs let Challenge</h3>
+                    <p>Practice when to use const and let with different scenarios.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: const vs let ચેલેન્જ</h3>
+                    <p>વિવિધ પરિસ્થિતિઓમાં const અને let નો ઉપયોગ ક્યારે કરવો તેનો અભ્યાસ કરો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="comment">// Use const for values that won't change</span>
+<span class="keyword">const</span> <span class="variable">PI</span> = <span class="number">3.14159</span>;
+<span class="keyword">const</span> <span class="variable">daysInWeek</span> = <span class="number">7</span>;
+
+<span class="comment">// Use let for values that will change</span>
+<span class="keyword">let</span> <span class="variable">score</span> = <span class="number">0</span>;
+<span class="keyword">let</span> <span class="variable">currentLevel</span> = <span class="number">1</span>;</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 4: Array Variables -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 4: Working with Arrays</h3>
+                    <p>Create and modify array variables to manage a todo list.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 4: એરે સાથે કામ કરવું</h3>
+                    <p>ટુડુ લિસ્ટને મેનેજ કરવા માટે એરે વેરિએબલ્સ બનાવો અને સુધારો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex4">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex4-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> <span class="variable">todoList</span> = [<span class="string">"Study JS"</span>, <span class="string">"Do Exercise"</span>];
+
+<span class="comment">// Add new item</span>
+todoList.push(<span class="string">"Read Book"</span>);
+
+<span class="comment">// Remove first item</span>
+todoList.shift();
+
+console.log(<span class="string">"Updated list:"</span>, todoList);</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Challenge Exercise -->
+            <div class="exercise-card challenge">
+                <div class="en active">
+                    <h3>🏆 Final Challenge: Student Grade Calculator</h3>
+                    <p>Create a grade calculator using different types of variables.</p>
+                </div>
+                <div class="gu">
+                    <h3>🏆 અંતિમ ચેલેન્જ: વિદ્યાર્થી ગ્રેડ કેલ્ક્યુલેટર</h3>
+                    <p>વિવિધ પ્રકારના વેરિએબલ્સનો ઉપયોગ કરીને ગ્રેડ કેલ્ક્યુલેટર બનાવો.</p>
+                </div>
+                <button class="hint-btn" data-hint="challenge">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="challenge-hint">
+                    <div class="code-example">
+                        <pre><span class="comment">// Create variables for scores</span>
+<span class="keyword">const</span> <span class="variable">maxScore</span> = <span class="number">100</span>;
+<span class="keyword">let</span> <span class="variable">scores</span> = [<span class="number">85</span>, <span class="number">92</span>, <span class="number">78</span>, <span class="number">95</span>];
+
+<span class="comment">// Calculate average</span>
+<span class="keyword">let</span> <span class="variable">total</span> = <span class="number">0</span>;
+<span class="keyword">for</span>(<span class="keyword">let</span> score <span class="keyword">of</span> scores) {
+    total += score;
+}
+<span class="keyword">let</span> <span class="variable">average</span> = total / scores.length;
+
+<span class="comment">// Determine grade</span>
+<span class="keyword">let</span> <span class="variable">grade</span>;
+<span class="keyword">if</span>(average >= <span class="number">90</span>) grade = <span class="string">'A'</span>;
+<span class="keyword">else if</span>(average >= <span class="number">80</span>) grade = <span class="string">'B'</span>;
+<span class="keyword">else if</span>(average >= <span class="number">70</span>) grade = <span class="string">'C'</span>;
+<span class="keyword">else</span> grade = <span class="string">'F'</span>;
+
+console.log(<span class="string">`Average: ${average}, Grade: ${grade}`</span>);</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <button class="nav-btn" onclick="window.location.href='../script1/index.html'">
+                <i class="fas fa-arrow-left"></i>
+                <span class="en active">Previous</span>
+                <span class="gu">પાછળ</span>
+            </button>
+            <button class="nav-btn next-btn" onclick="window.location.href='../script3/index.html'">
+                <span class="en active">Next</span>
+                <span class="gu">આગળ</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

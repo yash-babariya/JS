@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Date & Time Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>Date and Time</h1>
+                <p>Learn how to work with dates and times in JavaScript</p>
+            </div>
+            <div class="gu">
+                <h1>તારીખ અને સમય</h1>
+                <p>JavaScript માં તારીખ અને સમય સાથે કેવી રીતે કામ કરવું તે શીખો</p>
+            </div>
+        </div>
+
+        <!-- Creating Dates -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Creating Dates</h2>
+                <p>Different ways to create Date objects</p>
+            </div>
+            <div class="gu">
+                <h2>તારીખો બનાવવી</h2>
+                <p>Date ઓબ્જેક્ટ્સ બનાવવાની વિવિધ રીતો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Current date and time</span>
+<span class="keyword">const</span> now = <span class="keyword">new</span> Date();
+
+<span class="comment">// Specific date and time</span>
+<span class="keyword">const</span> date1 = <span class="keyword">new</span> Date(<span class="string">'2024-01-01'</span>);
+<span class="keyword">const</span> date2 = <span class="keyword">new</span> Date(2024, 0, 1, 12, 30, 0);
+<span class="keyword">const</span> timestamp = <span class="keyword">new</span> Date(1704067200000);</pre>
+            </div>
+        </div>
+
+        <!-- Date Methods -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Date Methods</h2>
+                <p>Getting and setting date components</p>
+            </div>
+            <div class="gu">
+                <h2>તારીખ મેથડ્સ</h2>
+                <p>તારીખના ભાગો મેળવવા અને સેટ કરવા</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">const</span> date = <span class="keyword">new</span> Date();
+
+<span class="comment">// Getters</span>
+date.getFullYear();    <span class="comment">// e.g., 2024</span>
+date.getMonth();       <span class="comment">// 0-11 (Jan-Dec)</span>
+date.getDate();        <span class="comment">// 1-31</span>
+date.getDay();         <span class="comment">// 0-6 (Sun-Sat)</span>
+date.getHours();       <span class="comment">// 0-23</span>
+date.getMinutes();     <span class="comment">// 0-59</span>
+date.getSeconds();     <span class="comment">// 0-59</span>
+
+<span class="comment">// Setters</span>
+date.setFullYear(2025);
+date.setMonth(6);      <span class="comment">// July</span>
+date.setDate(15);</pre>
+            </div>
+        </div>
+
+        <!-- Date Formatting -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Date Formatting</h2>
+                <p>Different ways to format dates</p>
+            </div>
+            <div class="gu">
+                <h2>તારીખ ફોર્મેટિંગ</h2>
+                <p>તારીખો ફોર્મેટ કરવાની વિવિધ રીતો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">const</span> date = <span class="keyword">new</span> Date();
+
+<span class="comment">// Built-in formats</span>
+date.toLocaleDateString();  <span class="comment">// e.g., "1/1/2024"</span>
+date.toLocaleTimeString();  <span class="comment">// e.g., "12:00:00 PM"</span>
+date.toISOString();        <span class="comment">// e.g., "2024-01-01T12:00:00.000Z"</span>
+
+<span class="comment">// Custom formatting</span>
+<span class="keyword">const</span> options = {
+    weekday: <span class="string">'long'</span>,
+    year: <span class="string">'numeric'</span>,
+    month: <span class="string">'long'</span>,
+    day: <span class="string">'numeric'</span>
+};
+date.toLocaleDateString(<span class="string">'en-US'</span>, options);</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your date handling skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી તારીખ હેન્ડલિંગ સ્કિલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Date Calculator</h3>
+                    <p>Create a utility to calculate date differences</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: તારીખ કેલ્ક્યુલેટર</h3>
+                    <p>તારીખોનો તફાવત ગણવા માટે યુટિલિટી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> dateCalculator = {
+    daysBetween(date1, date2) {
+        <span class="keyword">const</span> oneDay = 24 * 60 * 60 * 1000;
+        <span class="keyword">const</span> diff = Math.abs(date1 - date2);
+        <span class="keyword">return</span> Math.round(diff / oneDay);
+    },
+    addDays(date, days) {
+        <span class="keyword">const</span> result = <span class="keyword">new</span> Date(date);
+        result.setDate(result.getDate() + days);
+        <span class="keyword">return</span> result;
+    },
+    isWeekend(date) {
+        <span class="keyword">const</span> day = date.getDay();
+        <span class="keyword">return</span> day === 0 || day === 6;
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Date Formatter</h3>
+                    <p>Create a custom date formatting utility</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: તારીખ ફોર્મેટર</h3>
+                    <p>કસ્ટમ તારીખ ફોર્મેટિંગ યુટિલિટી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> dateFormatter = {
+    format(date, format) {
+        <span class="keyword">const</span> d = {
+            YYYY: date.getFullYear(),
+            MM: String(date.getMonth() + 1).padStart(2, <span class="string">'0'</span>),
+            DD: String(date.getDate()).padStart(2, <span class="string">'0'</span>),
+            hh: String(date.getHours()).padStart(2, <span class="string">'0'</span>),
+            mm: String(date.getMinutes()).padStart(2, <span class="string">'0'</span>)
+        };
+        <span class="keyword">return</span> format.replace(/YYYY|MM|DD|hh|mm/g, key => d[key]);
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Calendar Generator</h3>
+                    <p>Create a monthly calendar generator</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: કેલેન્ડર જનરેટર</h3>
+                    <p>માસિક કેલેન્ડર જનરેટર બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> calendarGenerator = {
+    generateMonth(year, month) {
+        <span class="keyword">const</span> firstDay = <span class="keyword">new</span> Date(year, month, 1);
+        <span class="keyword">const</span> lastDay = <span class="keyword">new</span> Date(year, month + 1, 0);
+        <span class="keyword">const</span> days = [];
+
+        <span class="keyword">for</span> (<span class="keyword">let</span> d = 1; d <= lastDay.getDate(); d++) {
+            days.push({
+                date: d,
+                weekday: <span class="keyword">new</span> Date(year, month, d).getDay(),
+                isToday: this.isToday(year, month, d)
+            });
+        }
+        <span class="keyword">return</span> days;
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script14/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script16/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

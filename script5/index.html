@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Loops Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript Loops</h1>
+                <p>Learn different types of loops in JavaScript</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript લૂપ્સ</h1>
+                <p>JavaScript મ��ં વિવિધ પ્રકારની લૂપ્સ શીખો</p>
+            </div>
+        </div>
+
+        <!-- For Loop -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>For Loop</h2>
+                <p>Most commonly used loop for iterating a specific number of times</p>
+            </div>
+            <div class="gu">
+                <h2>For લૂપ</h2>
+                <p>ચોક્કસ સંખ્યામાં પુનરાવર્તન માટે સૌથી વધુ વપરાતી લૂપ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Basic for loop</span>
+<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i < <span class="number">5</span>; i++) {
+    console.log(<span class="string">`Count: ${i}`</span>);
+}
+
+<span class="comment">// Loop through array</span>
+<span class="keyword">let</span> fruits = [<span class="string">'apple'</span>, <span class="string">'banana'</span>, <span class="string">'orange'</span>];
+<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}</pre>
+            </div>
+        </div>
+
+        <!-- While Loop -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>While Loop</h2>
+                <p>Executes code as long as a condition is true</p>
+            </div>
+            <div class="gu">
+                <h2>While લૂપ</h2>
+                <p>જ્યાં સુધી શરત સાચી હોય ત્યાં સુધી કોડ એક્ઝિક્યુટ કરે છે</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> count = <span class="number">0</span>;
+<span class="keyword">while</span> (count < <span class="number">5</span>) {
+    console.log(count);
+    count++;
+}
+
+<span class="comment">// Example with condition</span>
+<span class="keyword">let</span> number = <span class="number">1</span>;
+<span class="keyword">while</span> (number <= <span class="number">32</span>) {
+    console.log(number);
+    number *= <span class="number">2</span>;  <span class="comment">// Doubles each time</span>
+}</pre>
+            </div>
+        </div>
+
+        <!-- Do-While Loop -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Do-While Loop</h2>
+                <p>Executes code at least once before checking condition</p>
+            </div>
+            <div class="gu">
+                <h2>Do-While લૂપ</h2>
+                <p>શરત ચેક કરતા પહેલા ઓછામાં ઓછો એક વાર કોડ એક્ઝિક્યુટ કરે છે</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> i = <span class="number">0</span>;
+<span class="keyword">do</span> {
+    console.log(i);
+    i++;
+} <span class="keyword">while</span> (i < <span class="number">5</span>);
+
+<span class="comment">// Will run at least once</span>
+<span class="keyword">let</span> num = <span class="number">10</span>;
+<span class="keyword">do</span> {
+    console.log(<span class="string">"Executed once"</span>);
+} <span class="keyword">while</span> (num < <span class="number">5</span>);</pre>
+            </div>
+        </div>
+
+        <!-- For...of Loop -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>For...of Loop</h2>
+                <p>Modern way to iterate over arrays and other iterable objects</p>
+            </div>
+            <div class="gu">
+                <h2>For...of લૂપ</h2>
+                <p>એરે અને અન્ય ઇટરેબલ ઓબ્જેક્ટ્સ પર પુનરાવર્તન કરવાની આધુનિક રીત</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">const</span> colors = [<span class="string">'red'</span>, <span class="string">'green'</span>, <span class="string">'blue'</span>];
+
+<span class="keyword">for</span> (<span class="keyword">let</span> color <span class="keyword">of</span> colors) {
+    console.log(color);
+}
+
+<span class="comment">// With strings</span>
+<span class="keyword">const</span> text = <span class="string">'Hello'</span>;
+<span class="keyword">for</span> (<span class="keyword">let</span> char <span class="keyword">of</span> text) {
+    console.log(char);
+}</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your understanding of loops!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>લૂપ્સની તમારી સમજ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1: Sum Calculator -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Sum Calculator</h3>
+                    <p>Calculate the sum of numbers from 1 to n using different types of loops.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: સરવાળો કેલ્ક્યુલેટર</h3>
+                    <p>વિવિધ પ્રકારની લૂપ્સનો ઉપયોગ કરીને 1 થી n સુધીના નંબરોનો સરવાળો કરો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="comment">// Using for loop</span>
+<span class="keyword">let</span> n = <span class="number">5</span>;
+<span class="keyword">let</span> sum = <span class="number">0</span>;
+
+<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i <= n; i++) {
+    sum += i;
+}
+console.log(<span class="string">`Sum: ${sum}`</span>);  <span class="comment">// 15</span></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2: Pattern Printing -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Pattern Printing</h3>
+                    <p>Print this pattern using nested loops:</p>
+                    <pre>*
+**
+***
+****
+*****</pre>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: પેટર્ન પ્રિન્ટિંગ</h3>
+                    <p>નેસ્ટેડ લૂપ્સનો ઉપયોગ કરીને આ પેટર્ન પ્રિન્ટ કરો:</p>
+                    <pre>*
+**
+***
+****
+*****</pre>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i <= <span class="number">5</span>; i++) {
+    <span class="keyword">let</span> stars = <span class="string">''</span>;
+    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j <= i; j++) {
+        stars += <span class="string">'*'</span>;
+    }
+    console.log(stars);
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3: Array Operations -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Array Operations</h3>
+                    <p>Find the largest number in an array using a loop.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: એરે ઓપરેશન્સ</h3>
+                    <p>લૂપનો ઉપયોગ કરીને એરેમાં સૌથી મોટી સંખ્યા શોધો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> numbers = [<span class="number">23</span>, <span class="number">45</span>, <span class="number">12</span>, <span class="number">89</span>, <span class="number">34</span>];
+<span class="keyword">let</span> largest = numbers[<span class="number">0</span>];
+
+<span class="keyword">for</span> (<span class="keyword">let</span> num <span class="keyword">of</span> numbers) {
+    <span class="keyword">if</span> (num > largest) {
+        largest = num;
+    }
+}
+console.log(<span class="string">`Largest number: ${largest}`</span>);</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script4/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script6/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

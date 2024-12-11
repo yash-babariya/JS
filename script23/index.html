@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Interview Questions - Part 5</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Build Tools and Modern Web APIs -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Build Tools and Modern Web APIs (Part 5)</h2>
+                <div class="code-example">
+                    <pre><span class="comment">// Section 1: Build Tools and Deployment</span>
+
+81. Explain Webpack configuration
+    Example:
+    module.exports = {
+        entry: './src/index.js',
+        output: {
+            path: path.resolve(__dirname, 'dist'),
+            filename: 'bundle.js'
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    use: 'babel-loader'
+                }
+            ]
+        }
+    };
+
+82. What is Babel and how is it configured?
+    Example:
+    {
+        "presets": ["@babel/preset-env"],
+        "plugins": [
+            "@babel/plugin-transform-runtime",
+            "@babel/plugin-proposal-class-properties"
+        ]
+    }
+
+83. Explain different bundling strategies
+    - Code splitting
+    - Tree shaking
+    - Lazy loading
+    - Dynamic imports
+    Example:
+    import('./module.js').then(module => {
+        // Use module
+    });
+
+84. How do you optimize build size?
+    - Minification
+    - Compression
+    - Bundle analysis
+    - Dead code elimination
+    Example:
+    const TerserPlugin = require('terser-webpack-plugin');
+    module.exports = {
+        optimization: {
+            minimizer: [new TerserPlugin()]
+        }
+    };
+
+85. Explain CI/CD pipeline for JavaScript apps
+    - Version control
+    - Automated testing
+    - Build process
+    - Deployment strategies
+    - Monitoring
+
+<span class="comment">// Section 2: Modern Web APIs</span>
+
+86. How do you use the Fetch API?
+    Example:
+    fetch('/api/data')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+
+87. Explain Service Workers
+    Example:
+    navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+            console.log('SW registered');
+        });
+
+    // sw.js
+    self.addEventListener('fetch', event => {
+        event.respondWith(
+            caches.match(event.request)
+        );
+    });
+
+88. How do you use WebSockets?
+    Example:
+    const ws = new WebSocket('ws://localhost:8080');
+    ws.onmessage = event => {
+        console.log('Received:', event.data);
+    };
+    ws.send('Hello Server!');
+
+89. Explain the Intersection Observer API
+    Example:
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.src = entry.target.dataset.src;
+            }
+        });
+    });
+
+90. How do you use Web Workers?
+    Example:
+    // main.js
+    const worker = new Worker('worker.js');
+    worker.postMessage({ data: 'process this' });
+    worker.onmessage = e => console.log(e.data);
+
+    // worker.js
+    self.onmessage = e => {
+        // Process data
+        self.postMessage(result);
+    };
+
+<span class="comment">// Section 3: System Design</span>
+
+91. How would you design a real-time chat application?
+    - WebSocket connection
+    - Message queuing
+    - State management
+    - Offline support
+    Example:
+    class ChatSystem {
+        constructor() {
+            this.ws = new WebSocket(URL);
+            this.messageQueue = [];
+            this.offlineStorage = new IndexedDB();
+        }
+    }
+
+92. Explain microservices architecture
+    - Service discovery
+    - API gateway
+    - Load balancing
+    - Message queues
+    Example:
+    class ServiceRegistry {
+        registerService(name, url) {
+            // Register service
+        }
+        
+        discoverService(name) {
+            // Find service
+        }
+    }
+
+93. How do you implement caching?
+    - Browser cache
+    - Service worker cache
+    - Memory cache
+    - CDN
+    Example:
+    const cache = new Map();
+    function getCachedData(key) {
+        if (!cache.has(key)) {
+            cache.set(key, fetchData(key));
+        }
+        return cache.get(key);
+    }
+
+94. Explain authentication system design
+    - JWT tokens
+    - OAuth flow
+    - Refresh tokens
+    - Security measures
+    Example:
+    class AuthSystem {
+        generateToken(user) {
+            return jwt.sign({ id: user.id }, SECRET_KEY);
+        }
+        
+        verifyToken(token) {
+            return jwt.verify(token, SECRET_KEY);
+        }
+    }
+
+95. How would you design a file upload system?
+    - Chunked uploads
+    - Progress tracking
+    - Validation
+    - Storage strategy
+    Example:
+    class FileUploader {
+        async uploadChunk(file, chunkSize) {
+            const chunks = this.splitFile(file, chunkSize);
+            for (const chunk of chunks) {
+                await this.uploadChunkToServer(chunk);
+            }
+        }
+    }
+
+<span class="comment">// Section 4: Performance Optimization</span>
+
+96. Explain code splitting strategies
+    Example:
+    const MyComponent = React.lazy(() => 
+        import('./MyComponent')
+    );
+
+97. How do you implement infinite scrolling?
+    Example:
+    function InfiniteScroll() {
+        const [items, setItems] = useState([]);
+        const [page, setPage] = useState(1);
+        
+        useEffect(() => {
+            loadMore();
+        }, [page]);
+    }
+
+98. Explain memory leak prevention
+    Example:
+    class Component {
+        componentWillUnmount() {
+            this.subscription.unsubscribe();
+            clearInterval(this.interval);
+            window.removeEventListener('scroll', this.handler);
+        }
+    }
+
+99. How do you optimize images?
+    - Lazy loading
+    - Responsive images
+    - Format optimization
+    - Compression
+    Example:
+    <img 
+        src="placeholder.jpg"
+        data-src="actual-image.jpg"
+        loading="lazy"
+        srcset="small.jpg 300w, medium.jpg 600w"
+    />
+
+100. Explain progressive web apps
+    - Service workers
+    - Manifest file
+    - Offline support
+    - Push notifications
+    Example:
+    {
+        "name": "My PWA",
+        "short_name": "PWA",
+        "start_url": "/",
+        "display": "standalone",
+        "background_color": "#ffffff",
+        "theme_color": "#000000"
+    }</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script22/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script24/index.html'">
+                    <span class="en active">Next Part</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Objects Complete Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript Objects</h1>
+                <p>Complete guide to objects, methods, and object-oriented programming</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript ઓબ્જે��્ટ્સ</h1>
+                <p>ઓબ્જેક્ટ્સ, મેથડ્સ અને ઓબ્જેક્ટ-ઓરિએન્ટેડ પ્રોગ્રામિંગની સંપૂર્ણ માર્ગદર્શિકા</p>
+            </div>
+        </div>
+
+        <!-- Basic Object Operations -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Object Basics</h2>
+                <p>Creating and manipulating objects</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Object creation</span>
+<span class="keyword">const</span> person = {
+    name: <span class="string">'John'</span>,
+    age: 30,
+    greet() {
+        <span class="keyword">return</span> `Hello, I'm ${<span class="keyword">this</span>.name}`;
+    }
+};
+
+<span class="comment">// Object methods</span>
+Object.keys(person);      <span class="comment">// Get keys</span>
+Object.values(person);    <span class="comment">// Get values</span>
+Object.entries(person);   <span class="comment">// Get key-value pairs</span>
+Object.freeze(person);    <span class="comment">// Make immutable</span></pre>
+            </div>
+        </div>
+
+        <!-- Object Methods Reference -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Object Methods Reference</h2>
+                <p>Complete list of object methods with examples</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Test object</span>
+<span class="keyword">const</span> obj = { name: 'John', age: 30 };
+<span class="keyword">const</span> nested = { user: { details: { id: 1 } } };
+
+<span class="comment">// Object Creation Methods</span>
+Object.create(null);                <span class="comment">// Create object with no prototype</span>
+Object.assign({}, obj);             <span class="comment">// Clone object</span>
+Object.fromEntries([['a', 1]]);     <span class="comment">// Create from key-value pairs</span>
+
+<span class="comment">// Property Access Methods</span>
+Object.keys(obj);                   <span class="comment">// ['name', 'age']</span>
+Object.values(obj);                 <span class="comment">// ['John', 30]</span>
+Object.entries(obj);                <span class="comment">// [['name','John'], ['age',30]]</span>
+Object.getOwnPropertyNames(obj);    <span class="comment">// All properties including non-enumerable</span>
+Object.getOwnPropertySymbols(obj);  <span class="comment">// Symbol properties</span>
+
+<span class="comment">// Property Descriptors</span>
+Object.defineProperty(obj, 'id', {
+    value: 1,
+    writable: false,               <span class="comment">// Cannot change value</span>
+    enumerable: true,              <span class="comment">// Shows up in loops</span>
+    configurable: false            <span class="comment">// Cannot delete or modify descriptor</span>
+});
+
+Object.defineProperties(obj, {
+    prop1: { value: 1, writable: true },
+    prop2: { value: 2, writable: false }
+});
+
+Object.getOwnPropertyDescriptor(obj, 'name');   <span class="comment">// Get single descriptor</span>
+Object.getOwnPropertyDescriptors(obj);          <span class="comment">// Get all descriptors</span>
+
+<span class="comment">// Object State Methods</span>
+Object.freeze(obj);                <span class="comment">// Make immutable</span>
+Object.seal(obj);                  <span class="comment">// Prevent adding/deleting properties</span>
+Object.preventExtensions(obj);     <span class="comment">// Prevent adding properties</span>
+
+Object.isFrozen(obj);              <span class="comment">// Check if frozen</span>
+Object.isSealed(obj);              <span class="comment">// Check if sealed</span>
+Object.isExtensible(obj);          <span class="comment">// Check if extensible</span>
+
+<span class="comment">// Prototype Methods</span>
+Object.getPrototypeOf(obj);        <span class="comment">// Get prototype</span>
+Object.setPrototypeOf(obj, null);  <span class="comment">// Set prototype</span>
+
+<span class="comment">// Modern Object Methods (ES2020+)</span>
+Object.hasOwn(obj, 'name');        <span class="comment">// true (safer than hasOwnProperty)</span>
+Object.is(NaN, NaN);               <span class="comment">// true (strict equality)</span>
+
+<span class="comment">// Common Patterns</span>
+<span class="comment">// 1. Deep Clone</span>
+<span class="keyword">const</span> deepClone = obj => JSON.parse(JSON.stringify(obj));
+
+<span class="comment">// 2. Merge Objects</span>
+<span class="keyword">const</span> merged = { ...obj1, ...obj2 };
+
+<span class="comment">// 3. Optional Chaining</span>
+<span class="keyword">const</span> value = nested?.user?.details?.id;  <span class="comment">// Safe nested access</span>
+
+<span class="comment">// 4. Nullish Coalescing</span>
+<span class="keyword">const</span> name = obj.name ?? 'Anonymous';     <span class="comment">// Default value</span>
+
+<span class="comment">// 5. Dynamic Properties</span>
+<span class="keyword">const</span> key = 'dynamicKey';
+<span class="keyword">const</span> dynamic = { [key]: 'value' };
+
+<span class="comment">// 6. Property Shorthand</span>
+<span class="keyword">const</span> name = 'John';
+<span class="keyword">const</span> shorthand = { name };              <span class="comment">// Same as { name: name }</span>
+
+<span class="comment">// 7. Method Shorthand</span>
+<span class="keyword">const</span> methods = {
+    sayHi() { <span class="keyword">return</span> 'Hi!' }            <span class="comment">// Instead of sayHi: function() {}</span>
+};
+
+<span class="comment">// 8. Computed Properties</span>
+<span class="keyword">const</span> prefix = 'user';
+<span class="keyword">const</span> computed = {
+    [`${prefix}_id`]: 1,           <span class="comment">// Dynamic property name</span>
+    [`${prefix}_name`]: 'John'
+};
+
+<span class="comment">// Performance Tips</span>
+<span class="comment">// 1. Use Object.create(null) for pure dictionaries</span>
+<span class="comment">// 2. Avoid delete operator when possible</span>
+<span class="comment">// 3. Use Map for frequent additions/removals</span>
+<span class="comment">// 4. Use WeakMap for object keys</span>
+<span class="comment">// 5. Batch property updates</span></pre>
+            </div>
+        </div>
+
+        <!-- Advanced Object Concepts -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Advanced Object Concepts</h2>
+                <p>Prototypes, inheritance, and descriptors</p>
+            </div>
+            <div class="code-example">
+                <pre><span class="comment">// Prototypal inheritance</span>
+<span class="keyword">class</span> Animal {
+    constructor(name) {
+        <span class="keyword">this</span>.name = name;
+    }
+    speak() {
+        <span class="keyword">return</span> `${<span class="keyword">this</span>.name} makes a sound`;
+    }
+}
+
+<span class="keyword">class</span> Dog <span class="keyword">extends</span> Animal {
+    speak() {
+        <span class="keyword">return</span> `${<span class="keyword">this</span>.name} barks`;
+    }
+}
+
+<span class="comment">// Object descriptors</span>
+Object.defineProperty(person, <span class="string">'id'</span>, {
+    value: 1,
+    writable: false,
+    enumerable: true,
+    configurable: false
+});</pre>
+            </div>
+        </div>
+
+        <!-- Object Patterns -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Object Patterns</h2>
+                <p>Common object design patterns</p>
+            </div>
+            <div class="code-example">
+                <pre><span class="comment">// Factory pattern</span>
+<span class="keyword">const</span> createUser = (name, role) => ({
+    name,
+    role,
+    permissions: getPermissions(role),
+    timestamp: new Date()
+});
+
+<span class="comment">// Singleton pattern</span>
+<span class="keyword">const</span> Database = (() => {
+    <span class="keyword">let</span> instance;
+    
+    <span class="keyword">return</span> {
+        getInstance() {
+            <span class="keyword">if</span> (!instance) {
+                instance = {
+                    connect() { /* ... */ },
+                    query() { /* ... */ }
+                };
+            }
+            <span class="keyword">return</span> instance;
+        }
+    };
+})();</pre>
+            </div>
+        </div>
+
+        <!-- Exercises Section -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Object Exercises</h2>
+                <p>Practice object-oriented programming concepts</p>
+            </div>
+
+            <!-- Exercise 1: Object Manipulation -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Object Manipulation</h3>
+                    <p>Create utility functions for common object operations</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> objectUtils = {
+    deepClone: obj => JSON.parse(JSON.stringify(obj)),
+    
+    merge: (target, ...sources) => 
+        sources.reduce((acc, src) => {
+            Object.keys(src).forEach(key => {
+                acc[key] = src[key];
+            });
+            <span class="keyword">return</span> acc;
+        }, target),
+    
+    flatten: (obj, prefix = <span class="string">''</span>) =>
+        Object.keys(obj).reduce((acc, key) => {
+            <span class="keyword">const</span> prop = prefix ? `${prefix}.${key}` : key;
+            <span class="keyword">if</span> (typeof obj[key] === <span class="string">'object'</span>) {
+                Object.assign(acc, flatten(obj[key], prop));
+            } <span class="keyword">else</span> {
+                acc[prop] = obj[key];
+            }
+            <span class="keyword">return</span> acc;
+        }, {})
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2: Object-Oriented Design -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Object-Oriented Design</h3>
+                    <p>Implement a class hierarchy with inheritance</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">class</span> Vehicle {
+    constructor(make, model, year) {
+        <span class="keyword">this</span>.make = make;
+        <span class="keyword">this</span>.model = model;
+        <span class="keyword">this</span>.year = year;
+    }
+
+    getInfo() {
+        <span class="keyword">return</span> `${<span class="keyword">this</span>.year} ${<span class="keyword">this</span>.make} ${<span class="keyword">this</span>.model}`;
+    }
+}
+
+<span class="keyword">class</span> Car <span class="keyword">extends</span> Vehicle {
+    constructor(make, model, year, doors) {
+        super(make, model, year);
+        <span class="keyword">this</span>.doors = doors;
+        <span class="keyword">this</span>.type = <span class="string">'Car'</span>;
+    }
+}
+
+<span class="keyword">class</span> Motorcycle <span class="keyword">extends</span> Vehicle {
+    constructor(make, model, year, type) {
+        super(make, model, year);
+        <span class="keyword">this</span>.type = type;
+    }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3: Advanced Patterns -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Advanced Patterns</h3>
+                    <p>Implement advanced object patterns and state management</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> StateManager = {
+    state: {},
+    listeners: [],
+
+    setState(newState) {
+        <span class="keyword">this</span>.state = { ...<span class="keyword">this</span>.state, ...newState };
+        <span class="keyword">this</span>.notify();
+    },
+
+    getState() {
+        <span class="keyword">return</span> { ...<span class="keyword">this</span>.state };
+    },
+
+    subscribe(listener) {
+        <span class="keyword">this</span>.listeners.push(listener);
+        <span class="keyword">return</span> () => {
+            <span class="keyword">this</span>.listeners = 
+                <span class="keyword">this</span>.listeners.filter(l => l !== listener);
+        };
+    },
+
+    notify() {
+        <span class="keyword">this</span>.listeners.forEach(listener => 
+            listener(<span class="keyword">this</span>.state));
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script7/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script9/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

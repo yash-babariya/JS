@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript If-Else Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>JavaScript If-Else Statements</h1>
+                <p>Master decision making in JavaScript with conditional statements</p>
+            </div>
+            <div class="gu">
+                <h1>JavaScript If-Else સ્ટેટમેન્ટ્સ</h1>
+                <p>કન્ડિશનલ સ્ટેટમેન્ટ્સ સાથે JavaScript માં નિર્ણય લેવાની મહારત મેળવો</p>
+            </div>
+        </div>
+
+        <!-- Basic If Statement -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Basic If Statement</h2>
+                <p>Execute code only if a condition is true</p>
+            </div>
+            <div class="gu">
+                <h2>બેઝિક If સ્ટેટમેન્ટ</h2>
+                <p>જો શરત સાચી હોય તો જ કોડ એક્ઝિક્યુટ કરો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> age = <span class="number">20</span>;
+
+<span class="keyword">if</span> (age >= <span class="number">18</span>) {
+    console.log(<span class="string">"You can vote!"</span>);
+}</pre>
+            </div>
+        </div>
+
+        <!-- If-Else Statement -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>If-Else Statement</h2>
+                <p>Handle both true and false conditions</p>
+            </div>
+            <div class="gu">
+                <h2>If-Else સ્ટેટમેન્ટ</h2>
+                <p>સાચી અને ખોટી બંને શરતોને હેન્ડલ કરો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> temperature = <span class="number">25</span>;
+
+<span class="keyword">if</span> (temperature > <span class="number">30</span>) {
+    console.log(<span class="string">"It's hot!"</span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string">"It's pleasant"</span>);
+}</pre>
+            </div>
+        </div>
+
+        <!-- Multiple Conditions -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Multiple Conditions (else if)</h2>
+                <p>Handle multiple different conditions</p>
+            </div>
+            <div class="gu">
+                <h2>મલ્ટીપલ કન્ડિશન્સ (else if)</h2>
+                <p>અનેક અલગ શરતોને હેન્ડલ કરો</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> score = <span class="number">85</span>;
+
+<span class="keyword">if</span> (score >= <span class="number">90</span>) {
+    console.log(<span class="string">"Grade A"</span>);
+} <span class="keyword">else if</span> (score >= <span class="number">80</span>) {
+    console.log(<span class="string">"Grade B"</span>);
+} <span class="keyword">else if</span> (score >= <span class="number">70</span>) {
+    console.log(<span class="string">"Grade C"</span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string">"Need improvement"</span>);
+}</pre>
+            </div>
+        </div>
+
+        <!-- Nested If-Else -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Nested If-Else</h2>
+                <p>If-else statements inside other if-else statements</p>
+            </div>
+            <div class="gu">
+                <h2>નેસ્ટેડ If-Else</h2>
+                <p>અન્ય if-else સ્ટેટમેન્ટ્સની અંદર if-else સ્ટેટમેન્ટ્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="keyword">let</span> age = <span class="number">18</span>;
+<span class="keyword">let</span> hasID = <span class="keyword">true</span>;
+
+<span class="keyword">if</span> (age >= <span class="number">18</span>) {
+    <span class="keyword">if</span> (hasID) {
+        console.log(<span class="string">"Welcome to the club!"</span>);
+    } <span class="keyword">else</span> {
+        console.log(<span class="string">"Please bring your ID"</span>);
+    }
+} <span class="keyword">else</span> {
+    console.log(<span class="string">"You must be 18 or older"</span>);
+}</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your understanding of if-else statements!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>if-else સ્ટેટમેન્ટ્સની તમારી સમજ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1: Simple Login -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Login Checker</h3>
+                    <p>Create a simple login checker using if-else. Check if both username and password match.</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: લૉગિન ચેકર</h3>
+                    <p>if-else નો ઉપયોગ કરીને સરળ લૉગિન ચેકર બનાવો. યુઝરનેમ અને પાસવર્ડ બંને મેચ થાય છે કે નહીં તે ચેક
+                        કરો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> username = <span class="string">"user123"</span>;
+<span class="keyword">let</span> password = <span class="string">"pass123"</span>;
+
+<span class="keyword">if</span> (username === <span class="string">"user123"</span> && password === <span class="string">"pass123"</span>) {
+    console.log(<span class="string">"Login successful!"</span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string">"Invalid credentials"</span>);
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2: Age Groups -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Age Groups</h3>
+                    <p>Create age group classifier using if-else statements:</p>
+                    <ul>
+                        <li>0-12: Child</li>
+                        <li>13-19: Teen</li>
+                        <li>20-59: Adult</li>
+                        <li>60+: Senior</li>
+                    </ul>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: ઉંમર ગ્રુપ્સ</h3>
+                    <p>if-else સ્ટેટમેન્ટ્સનો ઉપયોગ કરીને ઉંમર ગ્રુપ ક્લાસિફાયર બનાવો:</p>
+                    <ul>
+                        <li>0-12: બાળક</li>
+                        <li>13-19: કિશોર</li>
+                        <li>20-59: પુખ્ત</li>
+                        <li>60+: વરિષ્ઠ</li>
+                    </ul>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> age = <span class="number">25</span>;
+
+<span class="keyword">if</span> (age >= <span class="number">60</span>) {
+    console.log(<span class="string">"Senior"</span>);
+} <span class="keyword">else if</span> (age >= <span class="number">20</span>) {
+    console.log(<span class="string">"Adult"</span>);
+} <span class="keyword">else if</span> (age >= <span class="number">13</span>) {
+    console.log(<span class="string">"Teen"</span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="string">"Child"</span>);
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3: Grade Calculator -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: Grade Calculator</h3>
+                    <p>Create a grade calculator using if-else statements for marks (0-100).</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: ગ્રેડ કેલ્ક્યુલેટર</h3>
+                    <p>માર્ક્સ (0-100) માટે if-else સ્ટેટમેન્ટ્સનો ઉપયોગ કરીને ગ્રેડ કેલ્ક્યુલેટર બનાવો.</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Hint
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">let</span> marks = <span class="number">85</span>;
+<span class="keyword">let</span> grade;
+
+<span class="keyword">if</span> (marks >= <span class="number">90</span>) {
+    grade = <span class="string">'A'</span>;
+} <span class="keyword">else if</span> (marks >= <span class="number">80</span>) {
+    grade = <span class="string">'B'</span>;
+} <span class="keyword">else if</span> (marks >= <span class="number">70</span>) {
+    grade = <span class="string">'C'</span>;
+} <span class="keyword">else if</span> (marks >= <span class="number">60</span>) {
+    grade = <span class="string">'D'</span>;
+} <span class="keyword">else</span> {
+    grade = <span class="string">'F'</span>;
+}
+
+console.log(<span class="string">`Your grade is ${grade}`</span>);</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script3/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script5/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+    <script src="script4.js"></script>
+</body>
+
+</html>

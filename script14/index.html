@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript RegEx Guide</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="section-card">
+            <div class="en active">
+                <h1>Regular Expressions</h1>
+                <p>Learn about pattern matching and text manipulation</p>
+            </div>
+            <div class="gu">
+                <h1>રેગ્યુલર એક્સપ્રેશન્���</h1>
+                <p>પેટર્ન મેચિંગ અને ટેક્સ્ટ મેનિપ્યુલેશન વિશે શીખો</p>
+            </div>
+        </div>
+
+        <!-- RegEx Basics -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>RegEx Basics</h2>
+                <p>Creating and using regular expressions</p>
+            </div>
+            <div class="gu">
+                <h2>રેગએક્સ બેઝિક્સ</h2>
+                <p>રેગ્યુલર એક્સપ્રેશન્સ બનાવવા અને વાપરવા</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Creating RegEx</span>
+<span class="keyword">const</span> pattern1 = /hello/;
+<span class="keyword">const</span> pattern2 = <span class="keyword">new</span> RegExp(<span class="string">'hello'</span>);
+
+<span class="comment">// Basic matching</span>
+<span class="keyword">const</span> text = <span class="string">'Hello, World!'</span>;
+console.log(pattern1.test(text.toLowerCase())); <span class="comment">// true</span>
+console.log(text.toLowerCase().match(pattern1));</pre>
+            </div>
+        </div>
+
+        <!-- RegEx Patterns -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Common Patterns</h2>
+                <p>Useful regular expression patterns</p>
+            </div>
+            <div class="gu">
+                <h2>સામાન્ય પેટર્ન્સ</h2>
+                <p>ઉપયોગી રેગ્યુલર એક્સપ્રેશન પેટર્ન્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// Email validation</span>
+<span class="keyword">const</span> emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+<span class="comment">// Phone number (US format)</span>
+<span class="keyword">const</span> phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+
+<span class="comment">// Password strength</span>
+<span class="keyword">const</span> passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;</pre>
+            </div>
+        </div>
+
+        <!-- RegEx Methods -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>RegEx Methods</h2>
+                <p>Methods for pattern matching and replacement</p>
+            </div>
+            <div class="gu">
+                <h2>રેગએક્સ મેથડ્સ</h2>
+                <p>પેટર્ન મેચિંગ અને રિપ્લેસમેન્ટ માટેની મેથડ્સ</p>
+            </div>
+            <div class="code-example">
+                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                <pre><span class="comment">// String methods with RegEx</span>
+<span class="keyword">const</span> text = <span class="string">'The quick brown fox'</span>;
+
+<span class="comment">// Search</span>
+text.search(/quick/);  <span class="comment">// Returns index</span>
+
+<span class="comment">// Replace</span>
+text.replace(/quick/, <span class="string">'slow'</span>);
+
+<span class="comment">// Match all occurrences</span>
+text.match(/[aeiou]/g);</pre>
+            </div>
+        </div>
+
+        <!-- Practice Exercises -->
+        <div class="section-card exercises-section">
+            <div class="en active">
+                <h2><i class="fas fa-dumbbell"></i> Practice Exercises</h2>
+                <p>Test your RegEx skills!</p>
+            </div>
+            <div class="gu">
+                <h2><i class="fas fa-dumbbell"></i> અભ્યાસ કસરતો</h2>
+                <p>તમારી રેગએક્સ સ્���િલ્સ ચકાસો!</p>
+            </div>
+
+            <!-- Exercise 1 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 1: Form Validation</h3>
+                    <p>Create patterns for common form validations</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 1: ફોર્મ વેલિડેશન</h3>
+                    <p>સામાન્ય ફોર્મ વેલિડેશન માટે પેટર્ન્સ બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex1">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex1-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> validators = {
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    phone: /^\+?[\d\s-]{10,}$/,
+    username: /^[a-zA-Z0-9_]{3,16}$/,
+    password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/,
+    url: /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 2: Text Parser</h3>
+                    <p>Create a parser to extract specific information</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 2: ટેક્સ્ટ પાર્સર</h3>
+                    <p>ચોક્કસ માહિતી કાઢવા માટે પાર્સર બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex2">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex2-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> textParser = {
+    extractEmails(text) {
+        <span class="keyword">const</span> emailPattern = /[\w\.-]+@[\w\.-]+\.\w+/g;
+        <span class="keyword">return</span> text.match(emailPattern) || [];
+    },
+    extractDates(text) {
+        <span class="keyword">const</span> datePattern = /\d{1,2}\/\d{1,2}\/\d{4}/g;
+        <span class="keyword">return</span> text.match(datePattern) || [];
+    },
+    extractURLs(text) {
+        <span class="keyword">const</span> urlPattern = /https?:\/\/[^\s]+/g;
+        <span class="keyword">return</span> text.match(urlPattern) || [];
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="exercise-card">
+                <div class="en active">
+                    <h3>🎯 Exercise 3: String Formatter</h3>
+                    <p>Create a utility to format and clean strings</p>
+                </div>
+                <div class="gu">
+                    <h3>🎯 કસરત 3: સ્ટ્રિંગ ફોર્મેટર</h3>
+                    <p>સ્ટ્રિંગ્સને ફોર્મેટ અને ક્લીન કરવા માટે યુટિલિટી બનાવો</p>
+                </div>
+                <button class="hint-btn" data-hint="ex3">
+                    <i class="fas fa-lightbulb"></i> Show Solution
+                </button>
+                <div class="hint-content hidden" id="ex3-hint">
+                    <div class="code-example">
+                        <pre><span class="keyword">const</span> stringFormatter = {
+    removeSpaces(str) {
+        <span class="keyword">return</span> str.replace(/\s+/g, <span class="string">' '</span>).trim();
+    },
+    formatPhoneNumber(num) {
+        <span class="keyword">return</span> num.replace(/(\d{3})(\d{3})(\d{4})/, 
+            <span class="string">'$1-$2-$3'</span>);
+    },
+    slugify(str) {
+        <span class="keyword">return</span> str.toLowerCase()
+            .replace(/[^\w\s-]/g, <span class="string">''</span>)
+            .replace(/\s+/g, <span class="string">'-'</span>);
+    }
+};</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script13/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script15/index.html'">
+                    <span class="en active">Next</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>

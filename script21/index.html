@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../common/styles.css">
+    <title>JavaScript Interview Questions - Part 3</title>
+</head>
+
+<body>
+    <div class="note-container">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">
+                <i class="fas fa-language"></i> English
+            </button>
+            <button class="lang-btn" data-lang="gu">
+                <i class="fas fa-language"></i> ગુજરાતી
+            </button>
+        </div>
+
+        <!-- Design Patterns and Architecture -->
+        <div class="section-card">
+            <div class="en active">
+                <h2>Design Patterns and Architecture (Part 3)</h2>
+                <div class="code-example">
+                    <pre><span class="comment">// Section 1: Design Patterns</span>
+
+41. Implement Singleton Pattern
+    Example:
+    const Singleton = (() => {
+        let instance;
+        return {
+            getInstance() {
+                if (!instance) {
+                    instance = new Object();
+                }
+                return instance;
+            }
+        };
+    })();
+
+42. Explain Observer Pattern
+    Example:
+    class EventEmitter {
+        constructor() {
+            this.events = {};
+        }
+        on(event, callback) {
+            if (!this.events[event]) {
+                this.events[event] = [];
+            }
+            this.events[event].push(callback);
+        }
+        emit(event, data) {
+            if (this.events[event]) {
+                this.events[event].forEach(cb => cb(data));
+            }
+        }
+    }
+
+43. Implement Factory Pattern
+    Example:
+    class UserFactory {
+        createUser(type) {
+            switch(type) {
+                case 'admin':
+                    return new AdminUser();
+                case 'regular':
+                    return new RegularUser();
+                default:
+                    throw new Error('Invalid user type');
+            }
+        }
+    }
+
+44. Demonstrate Module Pattern
+    Example:
+    const Module = (() => {
+        const private = 'secret';
+        return {
+            publicMethod() {
+                return private;
+            }
+        };
+    })();
+
+45. Show Decorator Pattern
+    Example:
+    class Coffee {
+        cost() { return 5; }
+    }
+    class MilkDecorator {
+        constructor(coffee) {
+            this.coffee = coffee;
+        }
+        cost() {
+            return this.coffee.cost() + 2;
+        }
+    }
+
+<span class="comment">// Section 2: Testing and Debugging</span>
+
+46. What are different types of testing?
+    Answer:
+    - Unit Testing
+    - Integration Testing
+    - End-to-End Testing
+    - Performance Testing
+    - Security Testing
+
+47. Write a Jest test example
+    Example:
+    describe('Calculator', () => {
+        test('adds 1 + 2 to equal 3', () => {
+            expect(calculator.add(1, 2)).toBe(3);
+        });
+    });
+
+48. How do you debug JavaScript?
+    - Console methods (log, error, warn, table)
+    - Debugger statement
+    - Chrome DevTools
+    - Source Maps
+    - Error handling
+
+49. Explain error handling best practices
+    Example:
+    try {
+        await riskyOperation();
+    } catch (error) {
+        if (error instanceof NetworkError) {
+            handleNetworkError(error);
+        } else {
+            throw error;
+        }
+    }
+
+50. Write test doubles (mocks/stubs)
+    Example:
+    jest.mock('./api', () => ({
+        fetchData: jest.fn().mockResolvedValue({ data: 'mocked' })
+    }));
+
+<span class="comment">// Section 3: Security</span>
+
+51. What is XSS and how to prevent it?
+    Example:
+    // Bad
+    element.innerHTML = userInput;
+    // Good
+    element.textContent = userInput;
+
+52. Explain CSRF protection
+    Example:
+    // Include CSRF token in headers
+    fetch(url, {
+        headers: {
+            'CSRF-Token': csrfToken
+        }
+    });
+
+53. How to handle sensitive data?
+    - Use HTTPS
+    - Encrypt sensitive data
+    - Don't store in localStorage
+    - Use HTTP-only cookies
+    - Implement proper authentication
+
+54. Secure coding practices
+    - Input validation
+    - Output encoding
+    - Content Security Policy
+    - Secure dependencies
+    - Regular updates
+
+55. API security best practices
+    - Use JWT tokens
+    - Rate limiting
+    - Input sanitization
+    - Error handling
+    - CORS configuration
+
+<span class="comment">// Section 4: Common Coding Challenges</span>
+
+56. Implement debounce function
+    Example:
+    function debounce(fn, delay) {
+        let timeoutId;
+        return function(...args) {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                fn.apply(this, args);
+            }, delay);
+        };
+    }
+
+57. Create deep clone function
+    Example:
+    function deepClone(obj) {
+        if (obj === null || typeof obj !== 'object') {
+            return obj;
+        }
+        const clone = Array.isArray(obj) ? [] : {};
+        for (let key in obj) {
+            clone[key] = deepClone(obj[key]);
+        }
+        return clone;
+    }
+
+58. Implement curry function
+    Example:
+    function curry(fn) {
+        return function curried(...args) {
+            if (args.length >= fn.length) {
+                return fn.apply(this, args);
+            }
+            return function(...moreArgs) {
+                return curried.apply(this, args.concat(moreArgs));
+            };
+        };
+    }
+
+59. Create event emitter
+    Example:
+    class EventEmitter {
+        constructor() {
+            this.events = new Map();
+        }
+        on(event, callback) {
+            if (!this.events.has(event)) {
+                this.events.set(event, []);
+            }
+            this.events.get(event).push(callback);
+        }
+        emit(event, data) {
+            if (this.events.has(event)) {
+                this.events.get(event).forEach(cb => cb(data));
+            }
+        }
+    }
+
+60. Implement promise.all
+    Example:
+    function promiseAll(promises) {
+        return new Promise((resolve, reject) => {
+            const results = [];
+            let completed = 0;
+            promises.forEach((promise, index) => {
+                Promise.resolve(promise)
+                    .then(value => {
+                        results[index] = value;
+                        completed++;
+                        if (completed === promises.length) {
+                            resolve(results);
+                        }
+                    })
+                    .catch(reject);
+            });
+        });
+    }</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-section">
+            <div class="nav-left">
+                <button class="nav-btn" onclick="window.location.href='../script20/index.html'">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="en active">Previous</span>
+                    <span class="gu">પાછળ</span>
+                </button>
+            </div>
+            <div class="nav-right">
+                <button class="nav-btn next-btn" onclick="window.location.href='../script22/index.html'">
+                    <span class="en active">Next Part</span>
+                    <span class="gu">આગળ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+</body>
+
+</html>
