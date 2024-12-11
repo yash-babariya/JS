@@ -1,0 +1,13 @@
+{
+    "name": "yjs-javascript-learning",
+    "version": "1.0.0",
+    "description": "Interactive JavaScript Learning Platform",
+    "scripts": {
+        "dev": "serve",
+        "build": "echo 'No build step required'",
+        "start": "serve"
+    },
+    "dependencies": {
+        "serve": "^14.0.0"
+    }
+}
