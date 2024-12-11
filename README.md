@@ -5,19 +5,21 @@
 
 <!-- Typing Animation -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&random=false&width=435&lines=Interactive+Learning+🚀;Bilingual+Support+🌐;500%2B+Interview+Questions+💡;Real-time+Feedback+⚡;Modern+UI%2FUX+🎨"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&random=false&width=435&lines=Interactive+Learning+🚀;Bilingual+Support+🌐;500%2B+Interview+Questions+💡;Real-time+Feedback+⚡;Modern+UI%2FUX+🎨;Community+Support+🤝;Continuous+Updates+🔄"/>
 </p>
 
 <!-- Animated Emojis -->
 <p align="center">
     <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Open%20Book.png" alt="Learning" width="100" height="100"/>
     <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Coding" width="100" height="100"/>
+    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" alt="Ideas" width="100" height="100"/>
 </p>
 
 <!-- Status Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/Modules-23_Complete-00ff00?style=for-the-badge&logo=javascript&logoColor=white"/>
   <img src="https://img.shields.io/badge/Questions-500+-00ff00?style=for-the-badge&logo=questionmark&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Community-1000%2B_Members-00ff00?style=for-the-badge&logo=people&logoColor=white"/>
 </p>
 
 ## 🎯 Learning Modules
@@ -43,8 +45,10 @@
 | 💻 **Interactive** | Live coding environment | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
 | 📚 **500+ Questions** | Comprehensive interview prep | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
 | 🎯 **Projects** | Hands-on learning | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
+| 🤝 **Community Support** | Join our vibrant community | ![Active](https://img.shields.io/badge/Active-00C853?style=for-the-badge) |
 
 </div>
+
 ## 🚀 Upcoming Features
 
 <div align="center">
@@ -55,5 +59,6 @@
 | 🧑‍🏫 **Mentorship** | One-on-one mentorship sessions | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
 | 🏆 **Certifications** | Earn certificates for module completion | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
 | 🌐 **More Languages** | Support for additional languages | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
+| 🔄 **Continuous Updates** | Regular content and feature updates | ![Planned](https://img.shields.io/badge/Planned-FFEB3B?style=for-the-badge) |
 
 </div>
