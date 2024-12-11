@@ -1,7 +1,7 @@
 <div align="center">
-  <h1>JSWithYash: Master JavaScript with Interactive Learning</h1>
+  <h1>YJS: Master JavaScript with Interactive Learning</h1>
   
-  # JSWithYash
+  # YJS
   ### Interactive JavaScript Learning Platform with Interview Preparation
 
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -24,7 +24,7 @@
 
 ## 📚 Project Overview
 
-JSWithYash is a comprehensive JavaScript learning platform that combines interactive tutorials with a vast collection of interview questions. The platform supports both English and ગુજરાતી languages, making it accessible to a wider audience.
+YJS is a comprehensive JavaScript learning platform that combines interactive tutorials with a vast collection of interview questions. The platform supports both English and ગુજરાતી languages, making it accessible to a wider audience.
 
 ## 🎯 Learning Path
 
